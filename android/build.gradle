@@ -33,9 +33,9 @@ android {
     targetSdkVersion getExtOrIntegerDefault('targetSdkVersion')
     versionCode 1
     versionName "1.0"
-    
+
   }
-  
+
   buildTypes {
     release {
       minifyEnabled false
@@ -126,5 +126,8 @@ def kotlin_version = getExtOrDefault('kotlinVersion')
 dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
+  implementation 'com.tom-roush:pdfbox-android:2.0.21.0'
+  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2'
+  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.2'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }

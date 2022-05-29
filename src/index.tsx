@@ -1,22 +1,23 @@
 import { NativeModules, Platform } from 'react-native';
 
-const LINKING_ERROR =
-  `The package 'react-native-pdf-extractor' doesn't seem to be linked. Make sure: \n\n` +
-  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
-  '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo managed workflow\n';
+const PdfExtractor = Platform.select({
+  android: NativeModules.PdfExtractor,
+  ios: {}
+})
 
-const PdfExtractor = NativeModules.PdfExtractor
-  ? NativeModules.PdfExtractor
-  : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
+export function getStringThatMatch(pattern: string | Array<string>): Promise<string> {
+  const patterns = Array.isArray(pattern) ? pattern : [pattern]
+  return PdfExtractor.getStringThatMatch(patterns);
+}
 
-export function multiply(a: number, b: number): Promise<number> {
-  return PdfExtractor.multiply(a, b);
+export function getAll(): Promise<string> {
+  return PdfExtractor.getAll();
+}
+
+export const Patterns = {
+  Ticket: [
+    '([0-9]{5}).([0-9]{5}) ([0-9]{5}).([0-9]{6}) ([0-9]{5}).([0-9]{6}) ([0-9]) ([0-9]{14})', // Bancário - Linha digitável
+    '([0-9]{12}) ([0-9]{12}) ([0-9]{12}) ([0-9]{12})', // Arrecadação - Código de barras
+    '([0-9]{11})-([0-9]) ([0-9]{11})-([0-9]) ([0-9]{11})-([0-9]) ([0-9]{11})-([0-9])' // Arrecadação - Linha digitável
+  ],
 }

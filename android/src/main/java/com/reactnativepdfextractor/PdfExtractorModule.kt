@@ -1,24 +1,49 @@
 package com.reactnativepdfextractor
 
-import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.bridge.ReactContextBaseJavaModule
-import com.facebook.react.bridge.ReactMethod
-import com.facebook.react.bridge.Promise
+import com.facebook.react.bridge.*
+import com.reactnativepdfextractor.core.PdfHandler
+import com.reactnativepdfextractor.core.StringHandler
+import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
+import com.tom_roush.pdfbox.pdmodel.PDDocument
 
 class PdfExtractorModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
+  init {
+    PDFBoxResourceLoader.init(reactContext)
+  }
 
-    override fun getName(): String {
-        return "PdfExtractor"
-    }
+  override fun getName(): String {
+      return "PdfExtractor"
+  }
 
-    // Example method
-    // See https://reactnative.dev/docs/native-modules-android
-    @ReactMethod
-    fun multiply(a: Int, b: Int, promise: Promise) {
-    
-      promise.resolve(a * b)
-    
-    }
+  @ReactMethod
+  fun getAll(promise: Promise) {
+    promise.resolve(getPdfText())
+  }
 
-    
+  @ReactMethod
+  fun getStringThatMatch(patterns: ReadableArray, promise: Promise) {
+    val data = getPdfText()
+
+    val regexes = patterns.toArrayList()
+      .map { pattern -> pattern.toString().toRegex() }
+
+    val matches = regexes
+      .map { regex -> StringHandler.match(data, regex) }
+      .filter { match -> !match.isNullOrEmpty() }
+
+    val result = matches.toSet().toList().joinToString("\n")
+
+    promise.resolve(result)
+  }
+
+
+  private fun getPdfText(): String? {
+    val data = currentActivity?.intent?.data
+    val resolver = currentActivity?.contentResolver
+
+    if(data === null) return null
+
+    val document = PDDocument.load(resolver?.openInputStream(data))
+    return PdfHandler.extract(document)
+  }
 }

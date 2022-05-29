@@ -1,31 +1,29 @@
-import * as React from 'react';
+import React, {useEffect, useState} from 'react';
+import { FlatList, StyleSheet, Text } from 'react-native';
+import { getStringThatMatch, Patterns } from 'react-native-pdf-extractor';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-pdf-extractor';
+// const pattern = '([0-9]{5}).([0-9]{5}) ([0-9]{5}).([0-9]{6}) ([0-9]{5}).([0-9]{6}) ([0-9]) ([0-9]{14})'
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = useState<string>("");
+  const data = result?.split('\n') || []
 
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+  useEffect(() => {
+    getStringThatMatch(Patterns.Ticket).then(setResult);
   }, []);
 
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <FlatList
+      style={styles.container}
+      data={data || []}
+      renderItem={({ item }: { item: string }) => (<Text>{item}</Text>)}
+    />
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+    padding: 20,
   },
 });
