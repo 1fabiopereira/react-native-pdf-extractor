@@ -1,7 +1,6 @@
 package com.reactnativepdfextractor.core
 
 import android.util.Log
-
 import com.tom_roush.pdfbox.pdmodel.PDDocument
 import com.tom_roush.pdfbox.text.PDFTextStripper
 
