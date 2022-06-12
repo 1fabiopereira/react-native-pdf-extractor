@@ -37,12 +37,15 @@ project.xcworkspace
 .idea
 .project
 .settings
-local.properties
+*.hprof
 android.iml
+local.properties
 
-# Cocoapods
-#
-example/ios/Pods
+# Ruby / CocoaPods
+/ios/Pods/
+/vendor/bundle/
+/example/ios/Pods
+/example/vendor/bundle/
 
 # node.js
 #
