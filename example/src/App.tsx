@@ -1,21 +1,53 @@
-import React, {useEffect, useState} from 'react';
-import { FlatList, StyleSheet, Text } from 'react-native';
-import { getStringThatMatch, Patterns } from 'react-native-pdf-extractor';
+import React, { useEffect, useState } from 'react';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
+import {
+  getNumberOfPages,
+  getTextWithPattern,
+  hasPassword,
+  Patterns,
+} from 'react-native-pdf-extractor';
 
-export default function App() {
-  const [result, setResult] = useState<string>("");
-  const data = result?.split('\n') || []
+const App: React.FC = (): JSX.Element => {
+  const [result, setResult] = useState<Readonly<Array<string>>>([]);
+  const [pages, setPages] = useState<number>(0);
+  const [needPass, setNeedPass] = useState<boolean>(false);
 
   useEffect(() => {
-    getStringThatMatch(Patterns.Ticket).then(setResult);
+    (async () => {
+      try {
+        const isEncrypted = await hasPassword();
+        const pass = '******';
+        if (!isEncrypted) {
+          const numPages = await getNumberOfPages();
+          const response = await getTextWithPattern(Patterns.Brazil.BankSlip);
+
+          setResult(response);
+          setPages(numPages);
+          setNeedPass(false);
+        } else {
+          const numPages = await getNumberOfPages(pass);
+          const response = await getTextWithPattern(Patterns.Brazil.BankSlip, pass);
+
+          setResult(response);
+          setPages(numPages);
+          setNeedPass(true);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    })();
   }, []);
 
   return (
-    <FlatList
-      style={styles.container}
-      data={data || []}
-      renderItem={({ item }: { item: string }) => (<Text>{item}</Text>)}
-    />
+    <View style={styles.container}>
+      <Text>{`Number of pages: ${pages}`}</Text>
+      <Text>{`Need password: ${needPass}`}</Text>
+      <FlatList
+        style={{}}
+        data={result}
+        renderItem={({ item }: { item: string }) => <Text>{item}</Text>}
+      />
+    </View>
   );
 }
 
@@ -25,3 +57,5 @@ const styles = StyleSheet.create({
     padding: 20,
   },
 });
+
+export default React.memo(App)

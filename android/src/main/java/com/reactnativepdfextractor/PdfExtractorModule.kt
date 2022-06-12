@@ -2,9 +2,8 @@ package com.reactnativepdfextractor
 
 import com.facebook.react.bridge.*
 import com.reactnativepdfextractor.core.PdfHandler
-import com.reactnativepdfextractor.core.StringHandler
 import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
-import com.tom_roush.pdfbox.pdmodel.PDDocument
+import kotlinx.coroutines.runBlocking
 
 class PdfExtractorModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
   init {
@@ -16,34 +15,62 @@ class PdfExtractorModule(reactContext: ReactApplicationContext) : ReactContextBa
   }
 
   @ReactMethod
-  fun getAll(promise: Promise) {
-    promise.resolve(getPdfText())
+  fun getText(password: String?, promise: Promise) {
+    runBlocking {
+      val uri = currentActivity?.intent?.data
+      val resolver = currentActivity?.contentResolver
+
+      try {
+        val data = PdfHandler.getText(uri, resolver, null, password)
+        return@runBlocking promise.resolve(data)
+      } catch (e: Exception) {
+        return@runBlocking promise.reject(e)
+      }
+    }
   }
 
   @ReactMethod
-  fun getStringThatMatch(patterns: ReadableArray, promise: Promise) {
-    val data = getPdfText()
+  fun getTextWithPattern(patterns: ReadableArray, password: String?, promise: Promise) {
+    runBlocking {
+      val uri = currentActivity?.intent?.data
+      val resolver = currentActivity?.contentResolver
 
-    val regexes = patterns.toArrayList()
-      .map { pattern -> pattern.toString().toRegex() }
-
-    val matches = regexes
-      .map { regex -> StringHandler.match(data, regex) }
-      .filter { match -> !match.isNullOrEmpty() }
-
-    val result = matches.toSet().toList().joinToString("\n")
-
-    promise.resolve(result)
+      try {
+        val data = PdfHandler.getText(uri, resolver, patterns, password)
+        return@runBlocking promise.resolve(data)
+      } catch (e: Exception) {
+        return@runBlocking promise.reject(e)
+      }
+    }
   }
 
-
-  private fun getPdfText(): String? {
-    val data = currentActivity?.intent?.data
+  @ReactMethod
+  fun hasPassword(promise: Promise) {
+    val uri = currentActivity?.intent?.data
     val resolver = currentActivity?.contentResolver
 
-    if(data === null) return null
+    runBlocking {
+      try {
+        val data = PdfHandler.isEncrypted(uri, resolver)
+        return@runBlocking promise.resolve(data)
+      } catch (e: Exception) {
+        return@runBlocking promise.reject(e)
+      }
+    }
+  }
 
-    val document = PDDocument.load(resolver?.openInputStream(data))
-    return PdfHandler.extract(document)
+  @ReactMethod
+  fun getNumberOfPages(password: String?, promise: Promise) {
+    val uri = currentActivity?.intent?.data
+    val resolver = currentActivity?.contentResolver
+
+    runBlocking {
+      try {
+        val data = PdfHandler.getNumberOfPages(uri, resolver, password)
+        return@runBlocking promise.resolve(data)
+      } catch (e: Exception) {
+        return@runBlocking promise.reject(e)
+      }
+    }
   }
 }
