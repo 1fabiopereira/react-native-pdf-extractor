@@ -8,27 +8,24 @@
   "react-native": "src/index.tsx",
   "source": "src/index",
   "files": [
-    "src",
-    "lib",
-    "!**/__tests__",
     "!**/__fixtures__",
     "!**/__mocks__",
-    "android",
-    "ios",
-    "cpp",
-    "react-native-pdf-extractor.podspec",
-    "!lib/typescript/example",
+    "!**/__tests__",
     "!android/build",
-    "!ios/build"
+    "!documentation/",
+    "!lib/typescript/example",
+    "android",
+    "cpp",
+    "lib",
+    "src"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepare": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
-    "pods": "cd example && pod-install --quiet",
     "bootstrap": "yarn example && yarn"
   },
   "keywords": [

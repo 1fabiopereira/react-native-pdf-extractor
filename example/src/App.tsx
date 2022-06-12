@@ -8,7 +8,7 @@ import {
 } from 'react-native-pdf-extractor';
 
 const App: React.FC = (): JSX.Element => {
-  const [result, setResult] = useState<Readonly<Array<string>>>([]);
+  const [result, setResult] = useState<string[]>([]);
   const [pages, setPages] = useState<number>(0);
   const [needPass, setNeedPass] = useState<boolean>(false);
 
@@ -21,14 +21,14 @@ const App: React.FC = (): JSX.Element => {
           const numPages = await getNumberOfPages();
           const response = await getTextWithPattern(Patterns.Brazil.BankSlip);
 
-          setResult(response);
+          setResult(response as unknown as string[]);
           setPages(numPages);
           setNeedPass(false);
         } else {
           const numPages = await getNumberOfPages(pass);
           const response = await getTextWithPattern(Patterns.Brazil.BankSlip, pass);
 
-          setResult(response);
+          setResult(response as unknown as string[]);
           setPages(numPages);
           setNeedPass(true);
         }
@@ -44,7 +44,7 @@ const App: React.FC = (): JSX.Element => {
       <Text>{`Need password: ${needPass}`}</Text>
       <FlatList
         style={{}}
-        data={result}
+        data={result || []}
         renderItem={({ item }: { item: string }) => <Text>{item}</Text>}
       />
     </View>
