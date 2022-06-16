@@ -26,6 +26,6 @@
   },
   "exclude": [
     "docs",
-    "documentation"
+    "website"
   ]
 }
