@@ -1,0 +1,39 @@
+name: Check Code Quality
+
+on:
+  push:
+    branches: [ master, develop ]
+  pull_request:
+    branches: [ master, develop ]
+
+jobs:
+  lint-and-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Git checkout
+      uses: actions/checkout@v2
+
+    - name: 'Use Node.js Version 16.x'
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16.14.x
+
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+
+    # Perform type check
+    - name: Type check
+      run: yarn type-check
+    
+    # Perform lint
+    - name: Lint
+      run: yarn lint
+
+    # Run tests type check
+    - name: Tests
+      run: yarn test
+
+    # Perform build project
+    - name: Build
+      run: yarn build

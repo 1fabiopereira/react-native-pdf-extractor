@@ -1,4 +1,5 @@
 import { NativeModules, Platform } from 'react-native';
+export * from './Patterns';
 
 const PdfExtractor = Platform.select({
   android: NativeModules.PdfExtractor,
@@ -14,9 +15,7 @@ export async function getTextWithPattern(
   return Object.freeze(data?.split('\n') || []);
 }
 
-export async function getText(
-  password?: string
-): Promise<Readonly<String[]>> {
+export async function getText(password?: string): Promise<Readonly<String[]>> {
   const data = await PdfExtractor.getText(password);
   return Object.freeze(data?.split('\n') || []);
 }
@@ -28,18 +27,3 @@ export async function hasPassword(): Promise<boolean> {
 export async function getNumberOfPages(password?: string): Promise<number> {
   return await PdfExtractor.getNumberOfPages(password);
 }
-
-export const Patterns = {
-  Common: {},
-  Brazil: {
-    Phone: [],
-    CPF: [],
-    CNPJ: [],
-    CEP: [],
-    BankSlip: [
-      '([0-9]{5}).([0-9]{5})\\s([0-9]{5}).([0-9]{6})\\s([0-9]{5}).([0-9]{6})\\s([0-9])\\s([0-9]{14})', // Bancário - Linha digitável
-      '([0-9]{12})\\s([0-9]{12})\\s([0-9]{12})\\s([0-9]{12})', // Arrecadação - Código de barras
-      '([0-9]{11})-([0-9])\\s([0-9]{11})-([0-9])\\s([0-9]{11})-([0-9])\\s([0-9]{11})-([0-9])', // Arrecadação - Linha digitável
-    ],
-  }
-};

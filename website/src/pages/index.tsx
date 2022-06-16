@@ -7,7 +7,7 @@ import Layout from '@theme/Layout';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -16,7 +16,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/before-you-start">
+            to="/docs/before-you-start"
+          >
             See docs
           </Link>
         </div>
@@ -26,11 +27,12 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description={siteConfig.tagline}>
+      description={siteConfig.tagline}
+    >
       <HomepageHeader />
     </Layout>
   );

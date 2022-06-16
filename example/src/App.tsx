@@ -26,7 +26,10 @@ const App: React.FC = (): JSX.Element => {
           setNeedPass(false);
         } else {
           const numPages = await getNumberOfPages(pass);
-          const response = await getTextWithPattern(Patterns.Brazil.BankSlip, pass);
+          const response = await getTextWithPattern(
+            Patterns.Brazil.BankSlip,
+            pass
+          );
 
           setResult(response as unknown as string[]);
           setPages(numPages);
@@ -49,7 +52,7 @@ const App: React.FC = (): JSX.Element => {
       />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -58,4 +61,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default React.memo(App)
+export default React.memo(App);

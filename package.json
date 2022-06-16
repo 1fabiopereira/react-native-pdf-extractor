@@ -1,6 +1,6 @@
 {
   "name": "react-native-pdf-extractor",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.1",
   "description": "Simple PDF ticket typeable line extractor",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -20,13 +20,10 @@
     "src"
   ],
   "scripts": {
-    "test": "jest --coverage",
-    "typescript": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "bob build",
-    "release": "release-it",
-    "example": "yarn --cwd example",
-    "bootstrap": "yarn example && yarn"
+    "build": "bob build",
+    "lint": "eslint \"src/*.{js,ts,tsx}\" --fix",
+    "test": "jest --coverage --collectCoverageFrom='./src/**' --detectOpenHandles",
+    "type-check": "tsc --noEmit"
   },
   "keywords": [
     "react-native",
@@ -48,24 +45,24 @@
     "@react-native-community/eslint-config": "^3.0.2",
     "@release-it/conventional-changelog": "^5.0.0",
     "@types/jest": "^28.1.1",
-    "@types/react": "^18.0.12",
     "@types/react-native": "0.67.8",
+    "@types/react": "^18.0.12",
     "commitlint": "^17.0.2",
-    "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint": "^8.17.0",
     "husky": "^8.0.1",
     "jest": "^28.1.1",
     "prettier": "^2.6.2",
-    "react": "18.1.0",
-    "react-native": "0.68.2",
     "react-native-builder-bob": "^0.18.2",
+    "react-native": "0.68.2",
+    "react": "18.1.0",
     "release-it": "^15.0.0",
     "typescript": "^4.7.3"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react": "*"
   },
   "jest": {
     "preset": "react-native",
