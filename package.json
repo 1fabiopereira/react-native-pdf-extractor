@@ -1,6 +1,6 @@
 {
   "name": "react-native-pdf-extractor",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "Simple PDF ticket typeable line extractor",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -12,8 +12,11 @@
     "!**/__mocks__",
     "!**/__tests__",
     "!android/build",
-    "!documentation/",
+    "!coverage",
     "!lib/typescript/example",
+    "!website",
+    "!.github",
+    "!.husky",
     "android",
     "cpp",
     "lib",
@@ -75,23 +78,6 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release ${version}",
-      "tagName": "v${version}"
-    },
-    "npm": {
-      "publish": true
-    },
-    "github": {
-      "release": true
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "angular"
-      }
-    }
   },
   "eslintConfig": {
     "root": true,

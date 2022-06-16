@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "rm -rf ../docs ./build && docusaurus build && cp -r ./build ../docs",
+    "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -20,8 +20,8 @@
     "@mdx-js/react": "^1.6.22",
     "clsx": "^1.1.1",
     "prism-react-renderer": "^1.3.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react": "^17.0.2"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.0.0-beta.21",
