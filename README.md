@@ -1,6 +1,7 @@
-# react-native-pdf-extractor
-
 ![React Native PDF Extractor Logo](./website/static/img/react-native-pdf-extractor.svg)
+
+
+## React Native PDF Extractor
 
 This library allows you to extract pdfs file data using matches specifics patterns.
 

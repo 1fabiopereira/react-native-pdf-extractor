@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'React Native Pdf Extractor',
-  tagline: 'This library allows you to extract pdfs file data using matches especifics patterns.',
+  title: 'React Native PDF Extractor',
+  tagline: 'This library allows you to extract pdfs file data using matches specifics patterns.',
   url: 'https://1fabiopereira.github.io/',
   baseUrl: '/react-native-pdf-extractor/',
   onBrokenLinks: 'throw',
