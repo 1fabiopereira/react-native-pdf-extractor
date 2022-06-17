@@ -15,6 +15,24 @@ class PdfExtractorModule(reactContext: ReactApplicationContext) : ReactContextBa
   }
 
   @ReactMethod
+  fun getUri(promise: Promise) {
+    runBlocking {
+      val uri = currentActivity?.intent?.data
+      if (uri !== null) return@runBlocking promise.resolve(uri.toString())
+      return@runBlocking promise.resolve(null);
+    }
+  }
+
+  @ReactMethod
+  fun canIExtract(promise: Promise) {
+    runBlocking {
+      val uri = currentActivity?.intent?.data
+      val resolver = currentActivity?.contentResolver
+      return@runBlocking promise.resolve(uri !== null && resolver !== null)
+    }
+  }
+
+  @ReactMethod
   fun getText(password: String?, promise: Promise) {
     runBlocking {
       val uri = currentActivity?.intent?.data
@@ -45,7 +63,7 @@ class PdfExtractorModule(reactContext: ReactApplicationContext) : ReactContextBa
   }
 
   @ReactMethod
-  fun hasPassword(promise: Promise) {
+  fun isEncrypted(promise: Promise) {
     val uri = currentActivity?.intent?.data
     val resolver = currentActivity?.contentResolver
 

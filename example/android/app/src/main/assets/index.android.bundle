@@ -1335,7 +1335,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   _reactNative.AppRegistry.registerComponent(_$$_REQUIRE(_dependencyMap[3], "./app.json").name, function () {
     return _App.default;
   });
-},0,[1,3,478,482],"index.tsx");
+},0,[1,3,478,483],"index.tsx");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -107150,6 +107150,8 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactNative = _$$_REQUIRE(_dependencyMap[4], "react-native");
 
+  var _index = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[5], "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/src/index"));
+
   var _this = this,
       _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/src/App.tsx";
 
@@ -107170,33 +107172,40 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
     var _useState5 = (0, _react.useState)(false),
         _useState6 = (0, _slicedToArray2.default)(_useState5, 2),
-        needPass = _useState6[0],
-        setNeedPass = _useState6[1];
+        isEncrypted = _useState6[0],
+        setIsEncrypted = _useState6[1];
+
+    var _useState7 = (0, _react.useState)(),
+        _useState8 = (0, _slicedToArray2.default)(_useState7, 2),
+        uri = _useState8[0],
+        setUri = _useState8[1];
+
+    function extract() {
+      return _extract.apply(this, arguments);
+    }
+
+    function _extract() {
+      _extract = (0, _asyncToGenerator2.default)(function* () {
+        var canIExtract = yield _index.default.canIExtract();
+        var uri = yield _index.default.getUri();
+
+        if (canIExtract) {
+          var encrypted = yield _index.default.isEncrypted();
+          var password = encrypted ? 'your-password' : undefined;
+          var numOfPages = yield _index.default.getNumberOfPages(password);
+          var response = yield _index.default.getTextWithPattern(_index.Patterns.Brazil.BankSlip, password);
+          setUri(uri);
+          setIsEncrypted(encrypted);
+          setResult(response);
+          setPages(numOfPages);
+        } else {}
+      });
+      return _extract.apply(this, arguments);
+    }
 
     (0, _react.useEffect)(function () {
       (0, _asyncToGenerator2.default)(function* () {
-        try {
-          var isEncrypted = yield (0, _$$_REQUIRE(_dependencyMap[5], "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/src/index").hasPassword)();
-          var pass = '******';
-
-          if (!isEncrypted) {
-            var numPages = yield (0, _$$_REQUIRE(_dependencyMap[5], "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/src/index").getNumberOfPages)();
-            var response = yield (0, _$$_REQUIRE(_dependencyMap[5], "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/src/index").getTextWithPattern)(_$$_REQUIRE(_dependencyMap[5], "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/src/index").Patterns.Brazil.BankSlip);
-            setResult(response);
-            setPages(numPages);
-            setNeedPass(false);
-          } else {
-            var _numPages = yield (0, _$$_REQUIRE(_dependencyMap[5], "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/src/index").getNumberOfPages)(pass);
-
-            var _response = yield (0, _$$_REQUIRE(_dependencyMap[5], "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/src/index").getTextWithPattern)(_$$_REQUIRE(_dependencyMap[5], "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/src/index").Patterns.Brazil.BankSlip, pass);
-
-            setResult(_response);
-            setPages(_numPages);
-            setNeedPass(true);
-          }
-        } catch (error) {
-          console.log(error);
-        }
+        return yield extract();
       })();
     }, []);
     return _react.default.createElement(_reactNative.View, {
@@ -107204,24 +107213,31 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42,
+        lineNumber: 34,
         columnNumber: 5
       }
     }, _react.default.createElement(_reactNative.Text, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43,
+        lineNumber: 35,
+        columnNumber: 7
+      }
+    }, "URI: " + uri), _react.default.createElement(_reactNative.Text, {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36,
         columnNumber: 7
       }
     }, "Number of pages: " + pages), _react.default.createElement(_reactNative.Text, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44,
+        lineNumber: 37,
         columnNumber: 7
       }
-    }, "Need password: " + needPass), _react.default.createElement(_reactNative.FlatList, {
+    }, "Is encrypted: " + isEncrypted), _react.default.createElement(_reactNative.FlatList, {
       style: {},
       data: result || [],
       renderItem: function renderItem(_ref2) {
@@ -107230,7 +107246,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
           __self: _this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 48,
+            lineNumber: 41,
             columnNumber: 53
           }
         }, item);
@@ -107238,7 +107254,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45,
+        lineNumber: 38,
         columnNumber: 7
       }
     }));
@@ -107259,80 +107275,103 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.Patterns = void 0;
-  exports.getNumberOfPages = getNumberOfPages;
-  exports.getText = getText;
-  exports.getTextWithPattern = getTextWithPattern;
-  exports.hasPassword = hasPassword;
+  var _exportNames = {};
+  exports.default = void 0;
 
   var _asyncToGenerator2 = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/asyncToGenerator"));
 
   var _reactNative = _$$_REQUIRE(_dependencyMap[2], "react-native");
+
+  Object.keys(_$$_REQUIRE(_dependencyMap[3], "./Patterns")).forEach(function (key) {
+    if (key === "default" || key === "__esModule") return;
+    if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+    if (key in exports && exports[key] === _$$_REQUIRE(_dependencyMap[3], "./Patterns")[key]) return;
+    Object.defineProperty(exports, key, {
+      enumerable: true,
+      get: function get() {
+        return _$$_REQUIRE(_dependencyMap[3], "./Patterns")[key];
+      }
+    });
+  });
 
   var PdfExtractor = _reactNative.Platform.select({
     android: _reactNative.NativeModules.PdfExtractor,
     ios: {}
   });
 
-  function getTextWithPattern(_x, _x2) {
-    return _getTextWithPattern.apply(this, arguments);
-  }
+  var getUri = function () {
+    var _ref = (0, _asyncToGenerator2.default)(function* () {
+      return PdfExtractor.getUri();
+    });
 
-  function _getTextWithPattern() {
-    _getTextWithPattern = (0, _asyncToGenerator2.default)(function* (pattern, password) {
+    return function getUri() {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  var getTextWithPattern = function () {
+    var _ref2 = (0, _asyncToGenerator2.default)(function* (pattern, password) {
       var patterns = Array.isArray(pattern) ? pattern : [pattern];
       var data = yield PdfExtractor.getTextWithPattern(patterns, password);
       return Object.freeze((data == null ? void 0 : data.split('\n')) || []);
     });
-    return _getTextWithPattern.apply(this, arguments);
-  }
 
-  function getText(_x3) {
-    return _getText.apply(this, arguments);
-  }
+    return function getTextWithPattern(_x, _x2) {
+      return _ref2.apply(this, arguments);
+    };
+  }();
 
-  function _getText() {
-    _getText = (0, _asyncToGenerator2.default)(function* (password) {
+  var getText = function () {
+    var _ref3 = (0, _asyncToGenerator2.default)(function* (password) {
       var data = yield PdfExtractor.getText(password);
-      return Object.freeze((data == null ? void 0 : data.split('\n')) || []);
+      return (data == null ? void 0 : data.split('\n')) || [];
     });
-    return _getText.apply(this, arguments);
-  }
 
-  function hasPassword() {
-    return _hasPassword.apply(this, arguments);
-  }
+    return function getText(_x3) {
+      return _ref3.apply(this, arguments);
+    };
+  }();
 
-  function _hasPassword() {
-    _hasPassword = (0, _asyncToGenerator2.default)(function* () {
-      return yield PdfExtractor.hasPassword();
+  var isEncrypted = function () {
+    var _ref4 = (0, _asyncToGenerator2.default)(function* () {
+      return PdfExtractor.isEncrypted();
     });
-    return _hasPassword.apply(this, arguments);
-  }
 
-  function getNumberOfPages(_x4) {
-    return _getNumberOfPages.apply(this, arguments);
-  }
+    return function isEncrypted() {
+      return _ref4.apply(this, arguments);
+    };
+  }();
 
-  function _getNumberOfPages() {
-    _getNumberOfPages = (0, _asyncToGenerator2.default)(function* (password) {
-      return yield PdfExtractor.getNumberOfPages(password);
+  var getNumberOfPages = function () {
+    var _ref5 = (0, _asyncToGenerator2.default)(function* (password) {
+      return PdfExtractor.getNumberOfPages(password);
     });
-    return _getNumberOfPages.apply(this, arguments);
-  }
 
-  var Patterns = {
-    Common: {},
-    Brazil: {
-      Phone: [],
-      CPF: [],
-      CNPJ: [],
-      CEP: [],
-      BankSlip: ['([0-9]{5}).([0-9]{5})\\s([0-9]{5}).([0-9]{6})\\s([0-9]{5}).([0-9]{6})\\s([0-9])\\s([0-9]{14})', '([0-9]{12})\\s([0-9]{12})\\s([0-9]{12})\\s([0-9]{12})', '([0-9]{11})-([0-9])\\s([0-9]{11})-([0-9])\\s([0-9]{11})-([0-9])\\s([0-9]{11})-([0-9])']
-    }
+    return function getNumberOfPages(_x4) {
+      return _ref5.apply(this, arguments);
+    };
+  }();
+
+  var canIExtract = function () {
+    var _ref6 = (0, _asyncToGenerator2.default)(function* () {
+      return PdfExtractor.canIExtract();
+    });
+
+    return function canIExtract() {
+      return _ref6.apply(this, arguments);
+    };
+  }();
+
+  var _default = {
+    canIExtract: canIExtract,
+    getNumberOfPages: getNumberOfPages,
+    getText: getText,
+    getTextWithPattern: getTextWithPattern,
+    getUri: getUri,
+    isEncrypted: isEncrypted
   };
-  exports.Patterns = Patterns;
-},479,[480,481,1],"../src/index.tsx");
+  exports.default = _default;
+},479,[480,481,1,482],"../src/index.tsx");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -107381,12 +107420,29 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },481,[],"../node_modules/@babel/runtime/helpers/asyncToGenerator.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.Patterns = void 0;
+  var Common = {
+    email: ['^(([^<>()[]\\.,;:s@"]+(.[^<>()[]\\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$']
+  };
+  var Brazil = {
+    BankSlip: ['([0-9]{5}).([0-9]{5})\\s([0-9]{5}).([0-9]{6})\\s([0-9]{5}).([0-9]{6})\\s([0-9])\\s([0-9]{14})', '([0-9]{12})\\s([0-9]{12})\\s([0-9]{12})\\s([0-9]{12})', '([0-9]{11})-([0-9])\\s([0-9]{11})-([0-9])\\s([0-9]{11})-([0-9])\\s([0-9]{11})-([0-9])']
+  };
+  var Patterns = {
+    Common: Common,
+    Brazil: Brazil
+  };
+  exports.Patterns = Patterns;
+},482,[],"../src/Patterns.ts");
 __d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
   module.exports = {
   "name": "PdfExtractorExample",
   "displayName": "PDF Extractor Example"
 }
 ;
-},482,[],"app.json");
+},483,[],"app.json");
 __r(88);
 __r(0);

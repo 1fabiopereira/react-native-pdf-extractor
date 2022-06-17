@@ -1,50 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
-import {
-  getNumberOfPages,
-  getTextWithPattern,
-  hasPassword,
-  Patterns,
-} from 'react-native-pdf-extractor';
+import Extractor, { Patterns } from 'react-native-pdf-extractor';
 
 const App: React.FC = (): JSX.Element => {
   const [result, setResult] = useState<string[]>([]);
   const [pages, setPages] = useState<number>(0);
-  const [needPass, setNeedPass] = useState<boolean>(false);
+  const [isEncrypted, setIsEncrypted] = useState<boolean>(false);
+  const [uri, setUri] = useState<string | undefined>();
+
+  async function extract() {
+    const canIExtract = await Extractor.canIExtract();
+    const uri = await Extractor.getUri();
+
+    if (canIExtract) {
+      const encrypted = await Extractor.isEncrypted();
+      const password = encrypted ? 'your-password' : undefined
+      const numOfPages = await Extractor.getNumberOfPages(password);
+      const response = await Extractor.getTextWithPattern(Patterns.Common.Email, password);
+
+      setUri(uri);
+      setIsEncrypted(encrypted)
+      setResult(response)
+      setPages(numOfPages)
+    }
+  }
 
   useEffect(() => {
-    (async () => {
-      try {
-        const isEncrypted = await hasPassword();
-        const pass = '******';
-        if (!isEncrypted) {
-          const numPages = await getNumberOfPages();
-          const response = await getTextWithPattern(Patterns.Brazil.BankSlip);
-
-          setResult(response as unknown as string[]);
-          setPages(numPages);
-          setNeedPass(false);
-        } else {
-          const numPages = await getNumberOfPages(pass);
-          const response = await getTextWithPattern(
-            Patterns.Brazil.BankSlip,
-            pass
-          );
-
-          setResult(response as unknown as string[]);
-          setPages(numPages);
-          setNeedPass(true);
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    })();
+    (async () => await extract())()
   }, []);
 
   return (
     <View style={styles.container}>
+      <Text>{`URI: ${uri}`}</Text>
       <Text>{`Number of pages: ${pages}`}</Text>
-      <Text>{`Need password: ${needPass}`}</Text>
+      <Text>{`Is encrypted: ${isEncrypted}`}</Text>
       <FlatList
         style={{}}
         data={result || []}

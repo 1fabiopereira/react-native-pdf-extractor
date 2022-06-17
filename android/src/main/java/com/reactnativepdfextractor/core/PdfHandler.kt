@@ -23,12 +23,13 @@ class PdfHandler {
           // Try open file and get if is encrypted
           try {
             val document = PDDocument.load(stream)
-            val hasPassword = document.isEncrypted
+            // val isEncrypted = document.isEncrypted - TODO: Check why this line return wrong value
+            val pages = document.numberOfPages
 
             document.close()
             stream.close()
 
-            return@async hasPassword
+            return@async pages <= 0
           } catch (e: Exception) {
             val regex = Regex("((\\s(decrypt)\\s)|\\s(password)\\s|(incorrect))")
             return@async e.message?.let { regex.containsMatchIn(it) } == true

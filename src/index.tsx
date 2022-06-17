@@ -6,24 +6,41 @@ const PdfExtractor = Platform.select({
   ios: {},
 });
 
-export async function getTextWithPattern(
+const getUri = async (): Promise<string | undefined> => {
+  return PdfExtractor.getUri();
+}
+
+const getTextWithPattern = async (
   pattern: string | String[],
   password?: string
-): Promise<Readonly<String[]>> {
+): Promise<string[]> => {
   const patterns = Array.isArray(pattern) ? pattern : [pattern];
   const data = await PdfExtractor.getTextWithPattern(patterns, password);
   return Object.freeze(data?.split('\n') || []);
 }
 
-export async function getText(password?: string): Promise<Readonly<String[]>> {
+const getText = async (password?: string): Promise<string[]> => {
   const data = await PdfExtractor.getText(password);
-  return Object.freeze(data?.split('\n') || []);
+  return data?.split('\n') || []
 }
 
-export async function hasPassword(): Promise<boolean> {
-  return await PdfExtractor.hasPassword();
+const isEncrypted = async (): Promise<boolean> => {
+  return PdfExtractor.isEncrypted();
 }
 
-export async function getNumberOfPages(password?: string): Promise<number> {
-  return await PdfExtractor.getNumberOfPages(password);
+const getNumberOfPages = async (password?: string): Promise<number> => {
+  return PdfExtractor.getNumberOfPages(password);
 }
+
+const canIExtract = async (): Promise<boolean> => {
+  return PdfExtractor.canIExtract();
+}
+
+export default ({
+  canIExtract,
+  getNumberOfPages,
+  getText,
+  getTextWithPattern,
+  getUri,
+  isEncrypted,
+})

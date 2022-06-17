@@ -1,7 +1,7 @@
 {
   "name": "react-native-pdf-extractor",
-  "version": "0.1.0-alpha.2",
-  "description": "Simple PDF ticket typeable line extractor",
+  "version": "0.1.0-alpha.3",
+  "description": "This library allows you to extract pdfs file data using matches specifics patterns.",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
   "types": "lib/typescript/src/index.d.ts",
@@ -30,8 +30,9 @@
   },
   "keywords": [
     "react-native",
-    "ios",
-    "android"
+    "android",
+    "pdf",
+    "extract"
   ],
   "repository": "https://github.com/1fabiopereira/react-native-pdf-extractor",
   "author": "Fábio Pereira <fabio.pereira.gti@gmail.com> (https://github.com/1fabiopereira)",

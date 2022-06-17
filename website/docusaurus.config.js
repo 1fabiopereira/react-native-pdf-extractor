@@ -13,6 +13,8 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  
+  
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -35,6 +37,8 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          editCurrentVersion: true,
+          editUrl: 'https://github.com/1fabiopereira/react-native-pdf-extractor/edit/master/website',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -50,7 +54,7 @@ const config = {
         title: 'React Native Pdf Extractor',
         logo: {
           alt: 'React Native Pdf Extractor',
-          src: 'img/logo.svg',
+          src: 'img/react-native-pdf-extractor.svg',
         },
         items: [
           {

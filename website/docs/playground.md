@@ -1,6 +1,5 @@
----
-sidebar_position: 7
----
-# Playground
+# Playground app
+
+You can see an implementation example on folder `example/`.
 
 **Work in progress**

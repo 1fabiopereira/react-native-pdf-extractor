@@ -22,7 +22,7 @@ const sidebars = {
       collapsible: false,
       type: 'category',
       label: 'Getting Started',
-      items: ['before-you-start', 'installation', 'manual-installation', 'configuration', 'usage', 'playground'],
+      items: ['before-you-start', 'installation', 'configuration', 'usage', 'playground'],
     },
     {
       collapsible: false,

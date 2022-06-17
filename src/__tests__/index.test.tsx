@@ -1,4 +1,4 @@
-import { hasPassword, getNumberOfPages, getText, getTextWithPattern } from '..';
+import Extractor from '..';
 
 jest.mock('react-native', () => ({
   Platform: {
@@ -6,22 +6,26 @@ jest.mock('react-native', () => ({
   },
   NativeModules: {
     PdfExtractor: {
+      canIExtract: jest.fn(),
       getNumberOfPages: jest.fn(),
       getText: jest.fn(),
       getTextWithPattern: jest.fn(),
-      hasPassword: jest.fn(),
+      getUri: jest.fn(),
+      isEncrypted: jest.fn(),
     },
   },
 }));
 
 const functions = new Map<string, any>([
-  ['hasPassword', hasPassword],
-  ['getNumberOfPages', getNumberOfPages],
-  ['getText', getText],
-  ['getTextWithPattern', getTextWithPattern],
+  ['canIExtract', Extractor.canIExtract],
+  ['getNumberOfPages', Extractor.getNumberOfPages],
+  ['getText', Extractor.getText],
+  ['getTextWithPattern', Extractor.getTextWithPattern],
+  ['getUri', Extractor.getUri],
+  ['isEncrypted', Extractor.isEncrypted],
 ]);
 
-describe('Test React Native Pdf Extractor', () => {
+describe('React Native Pdf Extractor', () => {
   beforeEach(() => jest.clearAllMocks());
 
   describe('Methods', () => {
@@ -30,9 +34,11 @@ describe('Test React Native Pdf Extractor', () => {
       ['getText', 7, [undefined]],
       ['getTextWithPattern', 1, [['[0-9]{2,4}', '[0-9]{2,4}'], 'password']],
       ['getTextWithPattern', 6, ['[0-9]{2,4}', 'password']],
-      ['hasPassword', 10, [undefined]],
+      ['isEncrypted', 10, [undefined]],
+      ['getUri', 2, [undefined]],
+      ['canIExtract', 6, [undefined]],
     ])(
-      'Should call native modules PdfExtractor %s function %s times with params %s',
+      'Should call PdfExtractor %s function %s times with right params',
       async (fn, times, params) => {
         const executors = new Array(times)
           .fill(fn)

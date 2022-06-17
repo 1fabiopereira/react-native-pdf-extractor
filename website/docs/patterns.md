@@ -1,6 +1,3 @@
----
-sidebar_position: 2
----
 # Patterns
 
 **react-native-pdf-extractor** already has some common patterns that can be easily used to data extract, however if there is a need you can easily create a new pattern to extract specific data according to your needs.
@@ -11,22 +8,13 @@ You can get libary's patterns importing them form:
 
 ```ts
 import { Patterns } from 'react-native-pdf-extractor'
-const patterns = Patterns.Brazil.BankSlip
+const patterns = Patterns.Common.Email
 
-console.log(patterns)
-
-// This will print out something like:
-/*
-    [
-        '([0-9]{5}).([0-9]{5})\s([0-9]{5}).([0-9]{6})\s([0-9]{5}).([0-9]{6})\s([0-9])\s([0-9]{14})',
-        '([0-9]{12})\s([0-9]{12})\s([0-9]{12})\s([0-9]{12})',
-        '([0-9]{11})-([0-9])\s([0-9]{11})-([0-9])\s([0-9]{11})-([0-9])\s([0-9]{11})-([0-9])'
-    ]
-*/
+console.log(patterns) // This will print out something like: ['(\\S+@\\w+\\.\\w+)']
 ```
 
-### Common (WIP)
+### Common
+    - Email
 ### Brazil
-    - Phones's numbers
     - Bank slip
 

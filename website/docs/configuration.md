@@ -1,6 +1,3 @@
----
-sidebar_position: 4
----
 # Configuration
 
 ### AndroidManifest.xml
@@ -27,6 +24,19 @@ On your `android/app/build.gradle` file you need add the following dependency:
 
 ```groovy
 implementation project(':reactnativepdfextractor')
+```
+
+### provider_paths.xml
+
+You need create this file on path `android/app/src/main/res/xml/provider_paths.xml` and put in the following content:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+  <external-path
+    name="external_files"
+    path="." />
+</paths>
 ```
 
 ### Clear cache

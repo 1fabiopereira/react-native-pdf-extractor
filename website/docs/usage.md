@@ -1,6 +1,3 @@
----
-sidebar_position: 5
----
 # Usage
 
 To use **react-native-pdf-extractor** you just need:
@@ -8,7 +5,7 @@ To use **react-native-pdf-extractor** you just need:
 - Import the wanted methods, like this way:
 
     ```ts
-    import { getNumberOfPages, getTextWithPattern, hasPassword, Patterns } from 'react-native-pdf-extractor'
+    import Extractor, { Patterns } from 'react-native-pdf-extractor';
     ```
 
 - Next, call them as you need:
@@ -16,10 +13,21 @@ To use **react-native-pdf-extractor** you just need:
     ```ts
     // Some codes was be hidden for readability
     ...
-    const pass = isEncrypted ? 'password' : undefined;
-    const isEncrypted = await hasPassword();
-    const numPages = await getNumberOfPages(pass);
-    const response = await getTextWithPattern(Patterns.Brazil.BankSlip, pass);
+    async function extract() {
+        const canIExtract = await Extractor.canIExtract();
+        const uri = await Extractor.getUri();
+
+        if (canIExtract) {
+            const encrypted = await Extractor.isEncrypted();
+            const password = encrypted ? 'your-password' : undefined
+            const numOfPages = await Extractor.getNumberOfPages(password);
+            const response = await Extractor.getTextWithPattern(Patterns.Common.Email, password);
+        }
+    }
+
+    useEffect(() => {
+        (async () => await extract())()
+    }, []);
     ...
     ```
 
