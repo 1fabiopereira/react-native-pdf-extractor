@@ -1,7 +1,7 @@
 {
   "name": "react-native-pdf-extractor-example",
   "description": "Example app for react-native-pdf-extractor",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "android": "react-native run-android",

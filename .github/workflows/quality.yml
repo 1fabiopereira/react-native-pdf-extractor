@@ -19,14 +19,13 @@ jobs:
       with:
         node-version: 16.14.x
 
-    - name: Install dependencies
-      run: yarn install --frozen-lockfile
-
-    # Config java sdk version
     - uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
         java-version: '11'
+
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
 
     # Perform type check
     - name: Type check
@@ -36,12 +35,12 @@ jobs:
     - name: Lint
       run: yarn lint
 
-    # Run tests type check
-    - name: Tests
+    # Run Jest Unit Tests
+    - name: Run Jest Unit Tests
       run: yarn test
 
-    # Run Gradle unit testing
-    - name: Run Gradle Unit Testing
+    # Run Gradle unit Tests
+    - name: Run Gradle Unit Tests
       run: |
         cd android/
         ./gradlew testDebugUnitTest --console verbose
