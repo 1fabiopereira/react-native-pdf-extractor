@@ -4,8 +4,8 @@ import com.reactnativepdfextractor.utils.TestUtils
 
 import junitparams.JUnitParamsRunner
 import junitparams.Parameters
+import org.junit.Assert
 
-import org.junit.jupiter.api.Assertions
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
@@ -35,8 +35,8 @@ class StringHandlerTest {
     checkEmpty: Boolean) {
     val result = StringHandler.format(text)
 
-    if (checkEmpty) Assertions.assertTrue(result!!.isNotEmpty())
-    Assertions.assertEquals(expected, result)
+    if (checkEmpty) Assert.assertTrue(result!!.isNotEmpty())
+    Assert.assertEquals(expected, result)
   }
 
   // ====================== MATCH ====================== //
@@ -73,7 +73,7 @@ class StringHandlerTest {
   ) {
     val result = StringHandler.match(text, regex)
 
-    if (checkEmpty) Assertions.assertTrue(result!!.isNotEmpty())
-    Assertions.assertEquals(expected, result)
+    if (checkEmpty) Assert.assertTrue(result!!.isNotEmpty())
+    Assert.assertEquals(expected, result)
   }
 }

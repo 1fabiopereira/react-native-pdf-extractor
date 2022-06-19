@@ -8,13 +8,12 @@ import io.mockk.*
 
 import junitparams.JUnitParamsRunner
 import junitparams.Parameters
+import org.junit.Assert
 
-import org.junit.jupiter.api.Assertions
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 
-import java.io.FileInputStream
 import java.io.InputStream
 
 
@@ -65,7 +64,7 @@ class PdfHandlerTest {
 
     val result = PdfHandler.isEncrypted(uri, resolver)
 
-    Assertions.assertEquals(expected, result)
+    Assert.assertEquals(expected, result)
   }
 
   @Test
@@ -81,11 +80,11 @@ class PdfHandlerTest {
     mockkStatic(PDDocument::class)
     every { PDDocument.load(stream) } returns document
 
-    val exception = Assertions.assertThrows(Exception::class.java) {
+    val exception = Assert.assertThrows(Exception::class.java) {
       PdfHandler.isEncrypted(uri, resolver)
     }
 
-    Assertions.assertEquals(expected.message, exception.message)
+    Assert.assertEquals(expected.message, exception.message)
   }
 
   // ====================== LOAD ====================== //
@@ -125,7 +124,7 @@ class PdfHandlerTest {
 
     val result = PdfHandler.load(uri, resolver, password)
 
-    Assertions.assertEquals(document, result)
+    Assert.assertEquals(document, result)
   }
 
   @Test
@@ -141,11 +140,11 @@ class PdfHandlerTest {
     mockkStatic(PDDocument::class)
       every { PDDocument.load(stream) } returns document
 
-    val exception = Assertions.assertThrows(Exception::class.java) {
+    val exception = Assert.assertThrows(Exception::class.java) {
       PdfHandler.load(uri, resolver, password)
     }
 
-    Assertions.assertEquals(expected.message, exception.message)
+    Assert.assertEquals(expected.message, exception.message)
   }
 
   // ====================== GET NUMBER OF PAGES ====================== //
@@ -174,7 +173,7 @@ class PdfHandlerTest {
 
     val result = PdfHandler.getNumberOfPages(uri, resolver, password)
 
-    Assertions.assertEquals(pages, result)
+    Assert.assertEquals(pages, result)
   }
 
 // ====================== GET TEXT ====================== //

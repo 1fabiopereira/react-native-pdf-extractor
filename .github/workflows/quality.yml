@@ -22,6 +22,12 @@ jobs:
     - name: Install dependencies
       run: yarn install --frozen-lockfile
 
+    # Config java sdk version
+    - uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '11'
+
     # Perform type check
     - name: Type check
       run: yarn type-check
@@ -33,6 +39,12 @@ jobs:
     # Run tests type check
     - name: Tests
       run: yarn test
+
+    # Run Gradle unit testing
+    - name: Run Gradle Unit Testing
+      run: |
+        cd android/
+        ./gradlew testDebugUnitTest --console verbose
 
     # Perform build project
     - name: Build

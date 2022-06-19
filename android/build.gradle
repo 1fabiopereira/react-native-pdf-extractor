@@ -7,6 +7,7 @@ buildscript {
   repositories {
     google()
     mavenCentral()
+    jcenter()
   }
 
   dependencies {
@@ -38,7 +39,7 @@ android {
 
   buildTypes {
     release {
-      minifyEnabled false
+      minifyEnabled true
     }
   }
   lintOptions {
@@ -49,6 +50,7 @@ android {
 repositories {
   mavenCentral()
   google()
+  jcenter()
 
   def found = false
   def defaultDir = null
@@ -110,14 +112,14 @@ def kotlin_version = getExtOrDefault('kotlinVersion')
 
 dependencies {
   // noinspection GradleDynamicVersion
-  api 'com.facebook.react:react-native:+'
-  implementation 'com.tom-roush:pdfbox-android:2.0.21.0'
-  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2'
-  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.2'
-  implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  api("com.facebook.react:react-native:+")
+  implementation("com.tom-roush:pdfbox-android:2.0.21.0")
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2")
+  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.2")
+  implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
 
   // Tests dependencies
-  testImplementation("org.junit.jupiter:junit-jupiter:5.7.1")
+  testImplementation("junit:junit:4.13.2")
   testImplementation("pl.pragmatists:JUnitParams:1.1.1")
   testImplementation("io.mockk:mockk:1.12.0")
 }
