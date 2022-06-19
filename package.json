@@ -25,7 +25,7 @@
   "scripts": {
     "build": "bob build",
     "lint": "eslint \"src/*.{js,ts,tsx}\" --fix",
-    "test": "jest --coverage --collectCoverageFrom='./src/**' --detectOpenHandles",
+    "test": "jest --detectOpenHandles",
     "type-check": "tsc --noEmit"
   },
   "keywords": [

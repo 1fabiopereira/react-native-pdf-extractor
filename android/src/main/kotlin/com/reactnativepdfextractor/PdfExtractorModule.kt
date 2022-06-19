@@ -19,7 +19,7 @@ class PdfExtractorModule(reactContext: ReactApplicationContext) : ReactContextBa
     runBlocking {
       val uri = currentActivity?.intent?.data
       if (uri !== null) return@runBlocking promise.resolve(uri.toString())
-      return@runBlocking promise.resolve(null);
+      return@runBlocking promise.resolve(null)
     }
   }
 

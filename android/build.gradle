@@ -1,13 +1,12 @@
 buildscript {
   // Buildscript is evaluated before everything else so we can't use getExtOrDefault
-  def kotlin_version = rootProject.ext.has('kotlinVersion') 
-    ? rootProject.ext.get('kotlinVersion') 
+  def kotlin_version = rootProject.ext.has('kotlinVersion')
+    ? rootProject.ext.get('kotlinVersion')
     : project.properties['PdfExtractor_kotlinVersion']
 
   repositories {
     google()
     mavenCentral()
-    jcenter()
   }
 
   dependencies {
@@ -49,7 +48,6 @@ android {
 
 repositories {
   mavenCentral()
-  jcenter()
   google()
 
   def found = false
@@ -59,10 +57,7 @@ repositories {
   if (rootProject.ext.has('reactNativeAndroidRoot')) {
     defaultDir = rootProject.ext.get('reactNativeAndroidRoot')
   } else {
-    defaultDir = new File(
-            projectDir,
-            '/../../../node_modules/react-native/android'
-    )
+    defaultDir = new File(projectDir, '/../../../node_modules/react-native/android')
   }
 
   if (defaultDir.exists()) {
@@ -80,15 +75,8 @@ repositories {
       if (found) return true
       parentDir = parentDir.parentFile
 
-      def androidSourcesDir = new File(
-              parentDir,
-              'node_modules/react-native'
-      )
-
-      def androidPrebuiltBinaryDir = new File(
-              parentDir,
-              'node_modules/react-native/android'
-      )
+      def androidSourcesDir = new File(parentDir, 'node_modules/react-native')
+      def androidPrebuiltBinaryDir = new File(parentDir, 'node_modules/react-native/android')
 
       if (androidPrebuiltBinaryDir.exists()) {
         maven {
@@ -127,4 +115,9 @@ dependencies {
   implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2'
   implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.2'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+  // Tests dependencies
+  testImplementation("org.junit.jupiter:junit-jupiter:5.7.1")
+  testImplementation("pl.pragmatists:JUnitParams:1.1.1")
+  testImplementation("io.mockk:mockk:1.12.0")
 }

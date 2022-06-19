@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
-import Extractor, { Patterns } from 'react-native-pdf-extractor';
+import Extractor from 'react-native-pdf-extractor';
 
 const App: React.FC = (): JSX.Element => {
   const [result, setResult] = useState<string[]>([]);
@@ -16,7 +16,7 @@ const App: React.FC = (): JSX.Element => {
       const encrypted = await Extractor.isEncrypted();
       const password = encrypted ? 'your-password' : undefined
       const numOfPages = await Extractor.getNumberOfPages(password);
-      const response = await Extractor.getTextWithPattern(Patterns.Common.Email, password);
+      const response = await Extractor.getText(password);
 
       setUri(uri);
       setIsEncrypted(encrypted)
@@ -34,6 +34,7 @@ const App: React.FC = (): JSX.Element => {
       <Text>{`URI: ${uri}`}</Text>
       <Text>{`Number of pages: ${pages}`}</Text>
       <Text>{`Is encrypted: ${isEncrypted}`}</Text>
+      <Text>Result:</Text>
       <FlatList
         style={{}}
         data={result || []}

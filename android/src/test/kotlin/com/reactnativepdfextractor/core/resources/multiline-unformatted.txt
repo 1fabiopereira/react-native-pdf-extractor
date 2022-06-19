@@ -1,0 +1,6 @@
+This is a file
+  with multiline
+text used on
+000.000.000-00
+      test cases.
+name.lastname@mail.com
