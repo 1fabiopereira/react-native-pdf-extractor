@@ -31,5 +31,5 @@ To use **react-native-pdf-extractor** you just need:
     ...
     ```
 
-    __NOTE:__ More information about **react-native-pdf-extractor's** API, you can check [here](/docs/methods).
+    __NOTE:__ For more information about **react-native-pdf-extractor's** API, check [here](/docs/methods).
 
