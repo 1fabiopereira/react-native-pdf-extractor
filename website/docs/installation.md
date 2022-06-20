@@ -20,7 +20,7 @@ npm install react-native-pdf-extractor
 
 ## Autolinking installation
 
-If you're using RN 0.60 or higher, you can benefit from autolinking for some of installation steps. We are working to make __react-native-pdf-extractor__ compatible, but at moment you just only can use manual installation.
+If you're using RN 0.60 or higher, you can benefit from autolinking for some of installation steps. We are working to make __react-native-pdf-extractor__ compatible, but at the moment you can only use the manual installation.
 #### Work in progress
 
 ## Manual installation
