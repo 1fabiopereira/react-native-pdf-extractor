@@ -2,7 +2,7 @@
 
 ### AndroidManifest.xml
 
-You need to add the followings config on your `android/app/main/AndroidManifest.xml`:
+You need to add the following config on your `android/app/main/AndroidManifest.xml`:
 
 ```xml
   <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"  />
@@ -28,7 +28,7 @@ implementation project(':reactnativepdfextractor')
 
 ### provider_paths.xml
 
-You need create this file on path `android/app/src/main/res/xml/provider_paths.xml` and put in the following content:
+You need create this file on path `android/app/src/main/res/xml/provider_paths.xml` and paste the following content:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -41,7 +41,7 @@ You need create this file on path `android/app/src/main/res/xml/provider_paths.x
 
 ### Clear cache
 
-To avoid cache problems we suggest clean android build cache, for do that, execute:
+To avoid cache problems we suggest to clean android build cache, execute the command bellow for it:
 
 ```sh
 (cd android/ && ./gradlew clean)
