@@ -1,5 +1,5 @@
 # Playground app
 
-You can see an implementation example on folder `example/`.
+You can see an implementation example `example/` directory.
 
 **Work in progress**
