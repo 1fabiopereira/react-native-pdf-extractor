@@ -2,7 +2,7 @@
 
 ### canIExtract
 
-This function return a `Promise<boolean>` that's determine if you received an uri from Android `Intent` and you perform data extraction.
+This function returns a `Promise<boolean>` that determine if you received an uri from Android `Intent` and perform data extraction.
 
 ```ts
 async function canIExtract(): Promise<boolean>
@@ -10,14 +10,14 @@ async function canIExtract(): Promise<boolean>
 
 ### getUri
 
-This function return a `Promise<string | undefined>` that's can be contain uri received from Android `Intent`.
+This function returns a `Promise<string | undefined>` that contains uri received from Android `Intent`.
 
 ```ts
 async function getUri(): Promise<string | undefined>
 ```
 ### isEncrypted
 
-This function return a `Promise<boolean>` that's determine if a pdf file is encrypted and need a password to be read.
+This function returns a `Promise<boolean>` that determine if a pdf file is encrypted and need a password to be read.
 
 ```ts
 async function isEncrypted(): Promise<boolean>
@@ -25,7 +25,7 @@ async function isEncrypted(): Promise<boolean>
 
 ### getNumberOfPages
 
-This function return a `Promise<number>` that's determine the pdf file number of pages.
+This function returns a `Promise<number>` that determine the pdf file number of pages.
 
 ```ts
 async function getNumberOfPages(): Promise<boolean>
@@ -50,7 +50,7 @@ async function getNumberOfPages(): Promise<boolean>
 
 ### getText
 
-This function return all pdf file text as `Promise<string[]>`, where each array position is one line of pdf file that it can get.
+This function returns all pdf file text as `Promise<string[]>`, where each array position is one line of the pdf file.
 
 ```ts
 async function getText(password?: string): Promise<string[]>
@@ -75,7 +75,7 @@ async function getText(password?: string): Promise<string[]>
 
 ### getTextWithPattern
 
-This function return pdf file text that matches with passed pattern, as `Promise<string[]>`, where each array position is one match of pdf file text with pattern.
+This function returns a pdf file text that matches with passed pattern, as `Promise<string[]>`, where each array position is one match of the pdf file text.
 
 ```ts
 async function getTextWithPattern(
