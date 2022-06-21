@@ -121,5 +121,5 @@ dependencies {
   // Tests dependencies
   testImplementation("junit:junit:4.13.2")
   testImplementation("pl.pragmatists:JUnitParams:1.1.1")
-  testImplementation("io.mockk:mockk:1.12.0")
+  testImplementation("io.mockk:mockk:1.12.4")
 }

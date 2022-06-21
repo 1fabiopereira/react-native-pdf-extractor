@@ -88,9 +88,9 @@ open class PdfHandler {
 
       @JvmStatic
       fun extract(document: PDDocument?): String? {
-          if (document === null) return null
-          val data = PDFTextStripper().getText(document)
-          return StringHandler.format(data)
+        if (document === null) return null
+        val data = PDFTextStripper().getText(document)
+        return StringHandler.format(data)
       }
 
       @JvmStatic
