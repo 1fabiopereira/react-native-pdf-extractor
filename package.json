@@ -8,15 +8,16 @@
   "react-native": "src/index.tsx",
   "source": "src/index",
   "files": [
+    "!.github",
+    "!.husky",
     "!**/__fixtures__",
     "!**/__mocks__",
     "!**/__tests__",
     "!android/build",
     "!coverage",
+    "!example",
     "!lib/typescript/example",
     "!website",
-    "!.github",
-    "!.husky",
     "android",
     "cpp",
     "lib",
@@ -25,8 +26,9 @@
   "scripts": {
     "build": "bob build",
     "lint": "eslint \"src/*.{js,ts,tsx}\" --fix",
-    "test": "jest --detectOpenHandles",
-    "type-check": "tsc --noEmit"
+    "test": "jest --coverage --detectOpenHandles",
+    "type-check": "tsc --noEmit",
+    "sonar": "sonar-scanner -Dsonar.host.url=https://sonarcloud.io"
   },
   "keywords": [
     "react-native",
@@ -40,7 +42,7 @@
   "bugs": {
     "url": "https://github.com/1fabiopereira/react-native-pdf-extractor/issues"
   },
-  "homepage": "https://github.com/1fabiopereira/react-native-pdf-extractor#readme",
+  "homepage": "https://1fabiopereira.github.io/react-native-pdf-extractor",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -49,24 +51,25 @@
     "@react-native-community/eslint-config": "^3.0.2",
     "@release-it/conventional-changelog": "^5.0.0",
     "@types/jest": "^28.1.1",
-    "@types/react-native": "0.67.8",
     "@types/react": "^18.0.12",
+    "@types/react-native": "0.67.8",
     "commitlint": "^17.0.2",
+    "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint": "^8.17.0",
     "husky": "^8.0.1",
     "jest": "^28.1.1",
     "prettier": "^2.6.2",
-    "react-native-builder-bob": "^0.18.2",
-    "react-native": "0.68.2",
     "react": "18.1.0",
+    "react-native": "0.68.2",
+    "react-native-builder-bob": "^0.18.2",
     "release-it": "^15.0.0",
+    "sonar-scanner": "^3.1.0",
     "typescript": "^4.7.3"
   },
   "peerDependencies": {
-    "react-native": "*",
-    "react": "*"
+    "react": "*",
+    "react-native": "*"
   },
   "jest": {
     "preset": "react-native",

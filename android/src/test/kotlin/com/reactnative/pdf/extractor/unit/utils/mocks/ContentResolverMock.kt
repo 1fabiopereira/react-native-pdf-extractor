@@ -1,13 +1,13 @@
-package com.reactnativepdfextractor.utils.mocks
+package com.reactnative.pdf.extractor.unit.utils.mocks
 
 import android.content.ContentResolver
-import com.reactnativepdfextractor.utils.mocks.interfaces.Mock
+import com.reactnative.pdf.extractor.unit.utils.mocks.interfaces.Mock
 
 import io.mockk.every
 import io.mockk.mockk
 import java.io.InputStream
 
-class ContentResolverMock: Mock {
+class ContentResolverMock(): Mock {
   private val resolver = mockk<ContentResolver>(relaxed = true)
   private var stream: InputStream? = null
 

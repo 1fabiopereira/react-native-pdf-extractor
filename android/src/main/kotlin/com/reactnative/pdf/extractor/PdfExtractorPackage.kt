@@ -1,4 +1,4 @@
-package com.reactnativepdfextractor
+package com.reactnative.pdf.extractor
 
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule

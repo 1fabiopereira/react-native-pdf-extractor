@@ -1,4 +1,4 @@
-package com.reactnativepdfextractor.core
+package com.reactnative.pdf.extractor.core
 
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking

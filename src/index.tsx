@@ -11,7 +11,7 @@ const getUri = async (): Promise<string | undefined> => {
 }
 
 const getTextWithPattern = async (
-  pattern: string | String[],
+  pattern: string | string[],
   password?: string
 ): Promise<string[]> => {
   const patterns = Array.isArray(pattern) ? pattern : [pattern];

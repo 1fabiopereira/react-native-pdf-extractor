@@ -1,4 +1,4 @@
-package com.reactnativepdfextractor.core
+package com.reactnative.pdf.extractor.core
 
 import android.content.ContentResolver
 import android.net.Uri

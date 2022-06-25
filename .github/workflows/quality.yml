@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Git checkout
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
     - name: Use Node.js Version 16.x
       uses: actions/setup-node@v2
@@ -28,24 +30,23 @@ jobs:
     - name: Install dependencies
       run: yarn install --frozen-lockfile
 
-    # Perform type check
     - name: Type check
       run: yarn type-check
     
-    # Perform lint
     - name: Lint
       run: yarn lint
 
-    # Run Jest Unit Tests
     - name: Run Jest Unit Tests
       run: yarn test
 
-    # Run Gradle unit Tests
-    - name: Run Gradle Unit Tests
-      run: |
-        cd android/
-        ./gradlew testDebugUnitTest --console verbose
+    - name: Typescript build
+      run: yarn build
+          
+    - name: SonarCloud Scan Typescript
+      run: yarn sonar
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-    # Perform build project
-    - name: Build
+    - name: Build Gradle and analyze
       run: yarn build

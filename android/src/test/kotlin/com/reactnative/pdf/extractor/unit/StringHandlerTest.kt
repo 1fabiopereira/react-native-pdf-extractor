@@ -1,6 +1,7 @@
-package com.reactnativepdfextractor.core
+package com.reactnative.pdf.extractor.unit
 
-import com.reactnativepdfextractor.utils.TestUtils
+import com.reactnative.pdf.extractor.core.StringHandler
+import com.reactnative.pdf.extractor.unit.utils.TestUtils
 import io.mockk.MockKAnnotations
 import io.mockk.clearAllMocks
 
@@ -53,7 +54,10 @@ class StringHandlerTest {
   @Parameterized.Parameters
   fun matchWithoutExceptionsCases(): Any {
     val localText = TestUtils.loadText("multiline-unformatted.txt")
-    val localRegexes = arrayOf("(\\S+@\\w+\\.\\w+)".toRegex(), "([0-9]{3})\\.([0-9]{3})\\.([0-9]{3})-([0-9]{2})".toRegex())
+    val localRegexes = arrayOf(
+      "(\\S+@\\w+\\.\\w+)".toRegex(),
+      "([0-9]{3})\\.([0-9]{3})\\.([0-9]{3})-([0-9]{2})".toRegex()
+    )
     val localExpectations = arrayOf("name.lastname@mail.com", "000.000.000-00")
 
     return listOf(

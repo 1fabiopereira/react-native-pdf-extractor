@@ -1,7 +1,7 @@
-package com.reactnativepdfextractor
+package com.reactnative.pdf.extractor
 
 import com.facebook.react.bridge.*
-import com.reactnativepdfextractor.core.PdfHandler
+import com.reactnative.pdf.extractor.core.PdfHandler
 import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
 import kotlinx.coroutines.runBlocking
 
