@@ -1,13 +1,11 @@
 buildscript {
-  // Buildscript is evaluated before everything else so we can't use getExtOrDefault
   def kotlin_version = rootProject.ext.has('kotlinVersion')
     ? rootProject.ext.get('kotlinVersion')
     : project.properties['PdfExtractor_kotlinVersion']
 
   repositories {
-    google()
     mavenCentral()
-    jcenter()
+    google()
   }
 
   dependencies {
@@ -31,7 +29,7 @@ android {
   compileSdkVersion getExtOrIntegerDefault('compileSdkVersion')
 
   defaultConfig {
-    minSdkVersion 21
+    minSdkVersion getExtOrIntegerDefault('minSdkVersion')
     targetSdkVersion getExtOrIntegerDefault('targetSdkVersion')
     versionCode 1
     versionName "0.1.1"
@@ -42,6 +40,7 @@ android {
       minifyEnabled true
     }
   }
+
   lintOptions {
     disable 'GradleCompatible'
   }
@@ -50,7 +49,6 @@ android {
 repositories {
   mavenCentral()
   google()
-  jcenter()
 
   def found = false
   def defaultDir = null
@@ -102,23 +100,26 @@ repositories {
 
   if (!found) {
     throw new GradleException(
-            "${project.name}: unable to locate React Native android sources. " +
-                    "Ensure you have you installed React Native as a dependency in your project and try again."
+      "${project.name}: unable to locate React Native android sources. " +
+        "Ensure you have you installed React Native as a dependency in your project and try again."
     )
   }
 }
 
-def kotlin_version = getExtOrDefault('kotlinVersion')
+def kotlin_version = getExtOrDefault("kotlinVersion")
 
 dependencies {
   // noinspection GradleDynamicVersion
   api("com.facebook.react:react-native:+")
-  implementation("com.tom-roush:pdfbox-android:2.0.21.0")
-  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2")
-  implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.2")
+
+  // Project dependencies
+  implementation('com.tom-roush:pdfbox-android:2.0.23.0')
+  implementation('org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.3')
+  implementation('org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.3')
   implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
 
-  // Tests dependencies
+
+  // Unit Tests dependencies
   testImplementation("junit:junit:4.13.2")
   testImplementation("pl.pragmatists:JUnitParams:1.1.1")
   testImplementation("io.mockk:mockk:1.12.4")

@@ -1,6 +1,6 @@
-package com.reactnativepdfextractor.utils.mocks
+package com.reactnative.pdf.extractor.unit.utils.mocks
 
-import com.reactnativepdfextractor.utils.mocks.interfaces.Mock
+import com.reactnative.pdf.extractor.unit.utils.mocks.interfaces.Mock
 import com.tom_roush.pdfbox.pdmodel.PDDocument
 
 import io.mockk.every

@@ -1,9 +1,12 @@
-package com.reactnativepdfextractor.core
+package com.reactnative.pdf.extractor.unit
 
 import android.net.Uri
 import com.facebook.react.bridge.ReadableArray
-import com.reactnativepdfextractor.utils.TestUtils
-import com.reactnativepdfextractor.utils.mocks.*
+import com.reactnative.pdf.extractor.core.PdfHandler
+import com.reactnative.pdf.extractor.core.StringHandler
+import com.reactnative.pdf.extractor.unit.utils.TestUtils
+import com.reactnative.pdf.extractor.unit.utils.mocks.*
+
 import io.mockk.*
 import junitparams.JUnitParamsRunner
 import junitparams.Parameters

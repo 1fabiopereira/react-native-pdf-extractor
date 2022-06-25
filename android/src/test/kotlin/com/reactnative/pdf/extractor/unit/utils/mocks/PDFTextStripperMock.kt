@@ -1,6 +1,6 @@
-package com.reactnativepdfextractor.utils.mocks
+package com.reactnative.pdf.extractor.unit.utils.mocks
 
-import com.reactnativepdfextractor.utils.mocks.interfaces.Mock
+import com.reactnative.pdf.extractor.unit.utils.mocks.interfaces.Mock
 import com.tom_roush.pdfbox.pdmodel.PDDocument
 import com.tom_roush.pdfbox.text.PDFTextStripper
 
@@ -19,8 +19,7 @@ class PDFTextStripperMock(): Mock {
   override fun mock() {
     mockkConstructor(PDFTextStripper::class)
     mockk<PDFTextStripper>(relaxed = true)
-      every {
-        anyConstructed<PDFTextStripper>()
+      every { anyConstructed<PDFTextStripper>()
           .getText(ofType(PDDocument::class))
       } returns text
   }
