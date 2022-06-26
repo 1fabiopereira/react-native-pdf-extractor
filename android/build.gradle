@@ -27,10 +27,6 @@ jacoco {
   toolVersion = "0.8.4"
 }
 
-tasks.withType(Test) {
-  jacoco.includeNoLocationClasses = true
-}
-
 def kotlin_version = getExtOrDefault("kotlinVersion")
 
 sonarqube {

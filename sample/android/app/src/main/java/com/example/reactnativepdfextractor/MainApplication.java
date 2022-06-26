@@ -8,7 +8,7 @@ import com.facebook.react.ReactPackage;
 import java.util.List;
 
 import com.facebook.soloader.SoLoader;
-import com.reactnativepdfextractor.PdfExtractorPackage;
+import com.reactnative.pdf.extractor.PdfExtractorPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 

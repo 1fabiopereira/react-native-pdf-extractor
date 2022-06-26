@@ -23,7 +23,7 @@ You need to add the following config on your `android/app/main/AndroidManifest.x
 On your `android/app/build.gradle` file you need add the following dependency:
 
 ```groovy
-implementation project(':reactnativepdfextractor')
+implementation project(':react-native-pdf-extractor')
 ```
 
 ### provider_paths.xml
