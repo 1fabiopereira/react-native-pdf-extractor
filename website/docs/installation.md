@@ -20,8 +20,7 @@ npm install react-native-pdf-extractor
 
 ## Autolinking installation
 
-If you're using RN 0.60 or higher, you can benefit from autolinking for some of installation steps. We are working to make __react-native-pdf-extractor__ compatible, but at the moment you can only use the manual installation.
-#### Work in progress
+If you're using RN 0.60 or higher, you can benefit from autolinking. You can proceed to the [configuration](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/configuration) step.
 
 ## Manual installation
 
@@ -31,7 +30,7 @@ On your `android/settings.gradle` file you need to add the following lines:
 
 ```groovy
 include ':reactnativepdfextractor'
-project(':reactnativepdfextractor').projectDir = new File(rootProject.projectDir, '../../android')
+project(':reactnativepdfextractor').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-pdf-extrctor/android')
 
 ```
 

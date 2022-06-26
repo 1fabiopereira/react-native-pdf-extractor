@@ -1,5 +1,3 @@
 # Playground app
 
-You can see an implementation example `example/` directory.
-
-**Work in progress**
+You can see an implementation example in `sample/` directory.
