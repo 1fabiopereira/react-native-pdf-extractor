@@ -2,11 +2,8 @@ package com.reactnative.pdf.extractor.core
 
 import android.content.ContentResolver
 import android.net.Uri
-import com.facebook.react.bridge.ReadableArray
 import com.tom_roush.pdfbox.pdmodel.PDDocument
 import com.tom_roush.pdfbox.text.PDFTextStripper
-import kotlinx.coroutines.async
-import kotlinx.coroutines.runBlocking
 import java.io.InputStream
 
 open class PdfHandler {
@@ -21,7 +18,6 @@ open class PdfHandler {
         // Try open file and get if is encrypted
         return try {
           val document = PDDocument.load(stream)
-          // val isEncrypted = document.isEncrypted - TODO: Check why this line return wrong value
           val pages = document.numberOfPages
 
           document.close()
@@ -35,16 +31,9 @@ open class PdfHandler {
       }
 
       @JvmStatic
-      fun getText(uri: Uri?, resolver: ContentResolver?, patterns: ReadableArray?, password: String?): String? {
+      fun getText(uri: Uri?, resolver: ContentResolver?, password: String?): String? {
         val document = load(uri, resolver, password)
-
-        // Apply match patterns
-        val data = if (patterns === null) {
-          extract(document)
-        }  else {
-          extractWithPattern(document, patterns)
-        }
-
+        val data = extract(document)
         document?.close()
 
         return data
@@ -65,7 +54,9 @@ open class PdfHandler {
         val encrypted = isEncrypted(uri, resolver)
 
         // Check password is required and was provide
-        if (encrypted && (password === null || password.isEmpty() || password.isBlank())) throw Exception("Password is required.")
+        if (encrypted && (password === null || password.isEmpty() || password.isBlank())) {
+          throw Exception("Password is required.")
+        }
 
         val stream = openInputStreamFile(uri, resolver)
 
@@ -90,25 +81,8 @@ open class PdfHandler {
       fun extract(document: PDDocument?): String? {
         if (document === null) return null
         val data = PDFTextStripper().getText(document)
+
         return StringHandler.format(data)
-      }
-
-      @JvmStatic
-      private fun extractWithPattern(document: PDDocument?, patterns: ReadableArray): String = runBlocking {
-        val deferred = async {
-          val data = extract(document)
-
-          val regexes = patterns.toArrayList()
-            .map { pattern -> pattern.toString().toRegex() }
-
-          val matches = regexes
-            .map { regex -> StringHandler.match(data, regex) }
-            .filter { match -> !match.isNullOrEmpty() }
-
-          return@async matches.toSet().toList().joinToString("\n")
-        }
-
-        return@runBlocking deferred.await()
       }
     }
 }
