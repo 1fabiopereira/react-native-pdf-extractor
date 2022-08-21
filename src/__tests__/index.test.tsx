@@ -1,4 +1,7 @@
-import Extractor from '..';
+import { NativeModules } from 'react-native';
+import Extractor, { Patterns } from '..';
+
+const Module = NativeModules.PdfExtractor;
 
 jest.mock('react-native', () => ({
   Platform: {
@@ -9,47 +12,90 @@ jest.mock('react-native', () => ({
       canIExtract: jest.fn(),
       getNumberOfPages: jest.fn(),
       getText: jest.fn(),
-      getTextWithPattern: jest.fn(),
       getUri: jest.fn(),
       isEncrypted: jest.fn(),
     },
   },
 }));
 
-const functions = new Map<string, any>([
-  ['canIExtract', Extractor.canIExtract],
-  ['getNumberOfPages', Extractor.getNumberOfPages],
-  ['getText', Extractor.getText],
-  ['getTextWithPattern', Extractor.getTextWithPattern],
-  ['getUri', Extractor.getUri],
-  ['isEncrypted', Extractor.isEncrypted],
-]);
-
 describe('React Native Pdf Extractor', () => {
   beforeEach(() => jest.clearAllMocks());
 
-  describe('Methods', () => {
-    it.each([
-      ['getNumberOfPages', 3, ['password']],
-      ['getText', 7, [undefined]],
-      ['getTextWithPattern', 1, [['[0-9]{2,4}', '[0-9]{2,4}'], 'password']],
-      ['getTextWithPattern', 6, ['[0-9]{2,4}', 'password']],
-      ['isEncrypted', 10, [undefined]],
-      ['getUri', 2, [undefined]],
-      ['canIExtract', 6, [undefined]],
-    ])(
-      'Should call PdfExtractor %s function %s times with right params',
-      async (fn, times, params) => {
-        const executors = new Array(times)
-          .fill(fn)
-          .map((f) => functions.get(f));
+  describe('canIExtract', () => {
+    it('Should call canIExtract correctly', async () => {
+      const canIExtractSpy = jest.spyOn(Module, 'canIExtract');
 
-        Promise.all(executors.map(async (exec) => await exec(...params))).then(
-          () => {
-            expect(fn).toHaveBeenCalledTimes(times);
-            expect(fn).toHaveBeenLastCalledWith(...params);
-          }
-        );
+      await Extractor.canIExtract();
+
+      expect(canIExtractSpy).toBeCalledTimes(1);
+    });
+  });
+
+  describe('isEncrypted', () => {
+    it('Should call isEncrypted correctly', async () => {
+      const isEncryptedSpy = jest.spyOn(Module, 'isEncrypted');
+
+      await Extractor.isEncrypted();
+
+      expect(isEncryptedSpy).toBeCalledTimes(1);
+    });
+  });
+
+  describe('getUri', () => {
+    it('Should call getUri correctly', async () => {
+      const getUriSpy = jest.spyOn(Module, 'getUri');
+
+      await Extractor.getUri();
+
+      expect(getUriSpy).toBeCalledTimes(1);
+    });
+  });
+
+  describe('getNumberOfPages', () => {
+    it.each([
+      ['with password', 'pass'],
+      ['without password', undefined],
+    ])(
+      'Should call getNumberOfPages correctly %s',
+      async (_: string, password) => {
+        const getNumberOfPagesSpy = jest.spyOn(Module, 'getNumberOfPages');
+
+        await Extractor.getNumberOfPages(password);
+
+        expect(getNumberOfPagesSpy).toBeCalledTimes(1);
+      }
+    );
+  });
+
+  describe('getText', () => {
+    it.each([
+      ['with password', 'pass'],
+      ['without password', undefined],
+    ])('Should call getText correctly %s', async (_: string, password) => {
+      const getTextSpy = jest.spyOn(Module, 'getText');
+
+      await Extractor.getText(password);
+
+      expect(getTextSpy).toBeCalledTimes(1);
+    });
+  });
+
+  describe('getTextWithPattern', () => {
+    it.each([
+      ['with pattern and password', 'pass', Patterns.Common.Email[0]],
+      ['with patterns and without password', undefined, Patterns.Common.Email],
+    ])(
+      'Should call getTextWithPattern correctly %s',
+      async (
+        _: string,
+        password: string | undefined,
+        patterns: RegExp | RegExp[]
+      ) => {
+        const getTextSpy = jest.spyOn(Module, 'getText');
+
+        await Extractor.getTextWithPattern(patterns, password);
+
+        expect(getTextSpy).toBeCalledTimes(1);
       }
     );
   });

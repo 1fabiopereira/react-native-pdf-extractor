@@ -18,6 +18,7 @@ class PdfExtractorModule(reactContext: ReactApplicationContext) : ReactContextBa
   fun getUri(promise: Promise) {
     val uri = currentActivity?.intent?.data
     if (uri !== null) promise.resolve(uri.toString())
+
     promise.resolve(null)
   }
 
@@ -25,6 +26,7 @@ class PdfExtractorModule(reactContext: ReactApplicationContext) : ReactContextBa
   fun canIExtract(promise: Promise) {
       val uri = currentActivity?.intent?.data
       val resolver = currentActivity?.contentResolver
+
       return promise.resolve(uri !== null && resolver !== null)
   }
 
@@ -34,20 +36,7 @@ class PdfExtractorModule(reactContext: ReactApplicationContext) : ReactContextBa
       val resolver = currentActivity?.contentResolver
 
     return try {
-      val data = PdfHandler.getText(uri, resolver, null, password)
-      promise.resolve(data)
-    } catch (e: Exception) {
-      promise.reject(e)
-    }
-  }
-
-  @ReactMethod
-  fun getTextWithPattern(patterns: ReadableArray, password: String?, promise: Promise) {
-      val uri = currentActivity?.intent?.data
-      val resolver = currentActivity?.contentResolver
-
-    return try {
-      val data = PdfHandler.getText(uri, resolver, patterns, password)
+      val data = PdfHandler.getText(uri, resolver, password)
       promise.resolve(data)
     } catch (e: Exception) {
       promise.reject(e)
