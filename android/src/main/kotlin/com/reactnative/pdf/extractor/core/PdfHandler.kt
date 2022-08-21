@@ -94,8 +94,7 @@ open class PdfHandler {
       }
 
       @JvmStatic
-      private fun extractWithPattern(document: PDDocument?, patterns: ReadableArray): String = runBlocking {
-        val deferred = async {
+      private fun extractWithPattern(document: PDDocument?, patterns: ReadableArray): String {
           val data = extract(document)
 
           val regexes = patterns.toArrayList()
@@ -105,10 +104,7 @@ open class PdfHandler {
             .map { regex -> StringHandler.match(data, regex) }
             .filter { match -> !match.isNullOrEmpty() }
 
-          return@async matches.toSet().toList().joinToString("\n")
-        }
-
-        return@runBlocking deferred.await()
+          return matches.toSet().toList().joinToString("\n")
       }
     }
 }
