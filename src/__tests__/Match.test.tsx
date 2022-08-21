@@ -19,6 +19,22 @@ describe('Match', () => {
       expect(matches[1]).toBe('mail@provider2.com');
     });
 
+    it('Should convert regex to global and return matches when it exists', async () => {
+      const data = [
+        'this is a line with an email: mail@provider.com',
+        'this e-mail mail@provider2.com is on 2nd line and is duplicated: mail@provider3.com',
+      ];
+
+      const matches = await Match(/(\S+@\w+\.\w+)/, data);
+
+      expect(Array.isArray(matches)).toBe(true);
+      expect(matches).toStrictEqual([
+        'mail@provider.com',
+        'mail@provider2.com',
+        'mail@provider3.com',
+      ]);
+    });
+
     it('Should remove duplicated matches and return when it exists', async () => {
       const data = [
         'this is a line with an email: mail@provider.com',
