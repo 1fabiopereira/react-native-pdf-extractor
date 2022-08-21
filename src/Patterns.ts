@@ -1,7 +1,5 @@
 const Common = {
-  Email: [
-    '(\\S+@\\w+\\.\\w+)',
-  ],
+  Email: ['(\\S+@\\w+\\.\\w+)'],
 };
 
 const Brazil = {

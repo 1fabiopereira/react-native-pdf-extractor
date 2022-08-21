@@ -1,7 +1,6 @@
 package com.reactnative.pdf.extractor.unit
 
 import android.net.Uri
-import com.facebook.react.bridge.ReadableArray
 import com.reactnative.pdf.extractor.core.PdfHandler
 import com.reactnative.pdf.extractor.core.StringHandler
 import com.reactnative.pdf.extractor.unit.utils.TestUtils
@@ -156,20 +155,19 @@ class PdfHandlerTest {
     val localText = TestUtils.loadText("multiline-unformatted.txt")
 
     return listOf(
-      arrayOf(localUri, localStream, null, 1, null, localText), // try get text from PDF file when it's not encrypted without pattern
-      arrayOf(localUri, localStream, "password", 0, null, localText), // try get text from PDF file when it's encrypted without pattern (password required)
+      arrayOf(localUri, localStream, null, 1, localText), // try get text from PDF file when it's not encrypted without pattern
+      arrayOf(localUri, localStream, "password", 0, localText), // try get text from PDF file when it's encrypted without pattern (password required)
     )
   }
 
   @Test
   @Parameters(method = "getTextWithoutExceptionsCases")
-  fun getTextWithoutExceptionsCasesTest(uri: Uri, stream: InputStream, password: String?, pages: Int, patterns: ReadableArray?, text: String) {
+  fun getTextWithoutExceptionsCasesTest(uri: Uri, stream: InputStream, password: String?, pages: Int, text: String) {
     loader.update(pages).mock()
     PDFTextStripperMock().update(text).mock()
 
     val localResolver = resolver.update(stream).mock()
-    val result = PdfHandler.getText(uri, localResolver, patterns, password)
-
+    val result = PdfHandler.getText(uri, localResolver, password)
 
     Assert.assertEquals(StringHandler.format(text), result)
   }

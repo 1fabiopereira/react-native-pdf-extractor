@@ -48,30 +48,4 @@ class StringHandlerTest {
     val result = StringHandler.format(text)
     Assert.assertEquals(expected, result)
   }
-
-  // ====================== MATCH ====================== //
-
-  @Parameterized.Parameters
-  fun matchWithoutExceptionsCases(): Any {
-    val localText = TestUtils.loadText("multiline-unformatted.txt")
-    val localRegexes = arrayOf(
-      "(\\S+@\\w+\\.\\w+)".toRegex(),
-      "([0-9]{3})\\.([0-9]{3})\\.([0-9]{3})-([0-9]{2})".toRegex()
-    )
-    val localExpectations = arrayOf("name.lastname@mail.com", "000.000.000-00")
-
-    return listOf(
-      arrayOf(" \n", localRegexes[0], ""),
-      arrayOf(null, localRegexes[1], null),
-      arrayOf(localText, localRegexes[0], localExpectations[0]),
-      arrayOf(localText, localRegexes[1], localExpectations[1]),
-    )
-  }
-
-  @Test
-  @Parameters(method = "matchWithoutExceptionsCases")
-  fun matchWithoutExceptionsCasesTest(text: String?, regex: Regex?, expected: String?) {
-    val result = StringHandler.match(text, regex)
-    Assert.assertEquals(expected, result)
-  }
 }

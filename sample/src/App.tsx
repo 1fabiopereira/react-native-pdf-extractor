@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
-import Extractor from 'react-native-pdf-extractor';
+import Extractor, { Patterns } from 'react-native-pdf-extractor';
 
 const App: React.FC = (): JSX.Element => {
   const [result, setResult] = useState<string[]>([]);
@@ -8,25 +8,30 @@ const App: React.FC = (): JSX.Element => {
   const [isEncrypted, setIsEncrypted] = useState<boolean>(false);
   const [uri, setUri] = useState<string | undefined>();
 
-  async function extract() {
-    const canIExtract = await Extractor.canIExtract();
-    const uri = await Extractor.getUri();
+  function extract() {
+    (async () => {
+      const canIExtract = await Extractor.canIExtract();
+      const path = await Extractor.getUri();
 
-    if (canIExtract) {
-      const encrypted = await Extractor.isEncrypted();
-      const password = encrypted ? 'your-password' : undefined
-      const numOfPages = await Extractor.getNumberOfPages(password);
-      const response = await Extractor.getText(password);
+      if (canIExtract) {
+        const encrypted = await Extractor.isEncrypted();
+        const password = encrypted ? 'your-password' : undefined;
+        const numOfPages = await Extractor.getNumberOfPages(password);
+        const response = await Extractor.getTextWithPattern(
+          Patterns.Common.Email,
+          password
+        );
 
-      setUri(uri);
-      setIsEncrypted(encrypted)
-      setResult(response)
-      setPages(numOfPages)
-    }
+        setUri(path);
+        setIsEncrypted(encrypted);
+        setResult(response as string[]);
+        setPages(numOfPages);
+      }
+    })();
   }
 
   useEffect(() => {
-    (async () => await extract())()
+    extract();
   }, []);
 
   return (
@@ -38,6 +43,7 @@ const App: React.FC = (): JSX.Element => {
       <FlatList
         style={{}}
         data={result || []}
+        keyExtractor={(item) => item}
         renderItem={({ item }: { item: string }) => <Text>{item}</Text>}
       />
     </View>
@@ -51,4 +57,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default React.memo(App);
+export default memo(App);

@@ -1335,7 +1335,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   _reactNative.AppRegistry.registerComponent(_$$_REQUIRE(_dependencyMap[3], "./app.json").name, function () {
     return _App.default;
   });
-},0,[1,3,478,483],"index.tsx");
+},0,[1,3,478,490],"index.tsx");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
@@ -3736,7 +3736,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _excluded = ["onLayout", "style", "size"];
 
   var _this = this,
-      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/ActivityIndicator/ActivityIndicator.js";
+      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/ActivityIndicator/ActivityIndicator.js";
 
   var React = _$$_REQUIRE(_dependencyMap[0], "react");
 
@@ -6373,7 +6373,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _ProgressBarAndroidNativeComponent = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[2], "./ProgressBarAndroidNativeComponent"));
 
   var _this = this,
-      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/ProgressBarAndroid/ProgressBarAndroid.android.js";
+      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/ProgressBarAndroid/ProgressBarAndroid.android.js";
 
   var React = _$$_REQUIRE(_dependencyMap[3], "react");
 
@@ -6870,7 +6870,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _NativeLogBox = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[9], "../../NativeModules/specs/NativeLogBox"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/Data/LogBoxData.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/Data/LogBoxData.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -62270,7 +62270,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _ViewNativeComponent = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[2], "./ViewNativeComponent"));
 
   var _this = this,
-      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/View/View.js";
+      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/View/View.js";
 
   var React = _$$_REQUIRE(_dependencyMap[3], "react");
 
@@ -62613,7 +62613,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/Button.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/Button.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -62776,7 +62776,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _invariant = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[14], "invariant"));
 
   var _excluded = ["onBlur", "onFocus"];
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/Touchable/TouchableNativeFeedback.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/Touchable/TouchableNativeFeedback.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -63863,7 +63863,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var React = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[4], "react"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Pressability/PressabilityDebug.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Pressability/PressabilityDebug.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -63922,7 +63922,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   'use strict';
 
   var _this2 = this,
-      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/Touchable/Touchable.js";
+      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/Touchable/Touchable.js";
 
   var React = _$$_REQUIRE(_dependencyMap[0], "react");
 
@@ -64643,7 +64643,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var React = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[14], "react"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js",
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js",
       _this4 = this;
 
   var _excluded = ["onBlur", "onFocus"];
@@ -68441,7 +68441,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Animated/src/createAnimatedComponent.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Animated/src/createAnimatedComponent.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -69138,7 +69138,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var React = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[2], "react"));
 
   var _this = this,
-      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Animated/src/components/AnimatedFlatList.js";
+      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Animated/src/components/AnimatedFlatList.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -69181,7 +69181,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _getPrototypeOf2 = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[9], "@babel/runtime/helpers/getPrototypeOf"));
 
   var _excluded = ["numColumns", "columnWrapperStyle"];
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Lists/FlatList.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Lists/FlatList.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
@@ -69542,7 +69542,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Lists/VirtualizedList.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Lists/VirtualizedList.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -71268,7 +71268,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _AndroidHorizontalScrollContentViewNativeComponent = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[11], "./AndroidHorizontalScrollContentViewNativeComponent"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
@@ -72529,7 +72529,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/ScrollView/ScrollViewStickyHeader.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/ScrollView/ScrollViewStickyHeader.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -72765,7 +72765,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _PullToRefreshViewNativeComponent = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[9], "./PullToRefreshViewNativeComponent"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/RefreshControl/RefreshControl.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/RefreshControl/RefreshControl.js";
   var _excluded = ["enabled", "colors", "progressBackgroundColor", "size", "progressViewOffset"],
       _excluded2 = ["tintColor", "titleColor", "title"];
 
@@ -73584,7 +73584,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _NativeImageLoaderAndroid = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[4], "./NativeImageLoaderAndroid"));
 
   var _this = this,
-      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Image/Image.android.js";
+      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Image/Image.android.js";
 
   var React = _$$_REQUIRE(_dependencyMap[5], "react");
 
@@ -74057,7 +74057,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var React = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[2], "react"));
 
   var _this = this,
-      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Animated/src/components/AnimatedScrollView.js";
+      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Animated/src/components/AnimatedScrollView.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -74086,7 +74086,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var React = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[2], "react"));
 
   var _this = this,
-      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Animated/src/components/AnimatedSectionList.js";
+      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Animated/src/components/AnimatedSectionList.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -74110,7 +74110,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Lists/SectionList.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Lists/SectionList.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -74224,7 +74224,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   'use strict';
 
   var _excluded = ["SectionSeparatorComponent", "renderItem", "renderSectionFooter", "renderSectionHeader", "sections", "stickySectionHeadersEnabled"];
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Lists/VirtualizedSectionList.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Lists/VirtualizedSectionList.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -74704,7 +74704,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Text/Text.js",
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Text/Text.js",
       _this5 = this;
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
@@ -75108,7 +75108,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _AndroidCheckBoxNativeComponent = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[8], "./AndroidCheckBoxNativeComponent"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/CheckBox/CheckBox.android.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/CheckBox/CheckBox.android.js";
   var _excluded = ["disabled", "value", "tintColors", "style", "forwardedRef"];
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -75269,7 +75269,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/DatePicker/DatePickerIOS.android.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/DatePicker/DatePickerIOS.android.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -75352,7 +75352,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _AndroidDrawerLayoutNativeComponent = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[8], "./AndroidDrawerLayoutNativeComponent"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/DrawerAndroid/DrawerLayoutAndroid.android.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/DrawerAndroid/DrawerLayoutAndroid.android.js";
   var _excluded = ["onDrawerStateChanged", "renderNavigationView", "onDrawerOpen", "onDrawerClose"];
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -75922,7 +75922,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Image/ImageBackground.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Image/ImageBackground.js";
   var _excluded = ["children", "style", "imageStyle", "imageRef"];
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
@@ -76020,7 +76020,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _RCTInputAccessoryViewNativeComponent = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[6], "./RCTInputAccessoryViewNativeComponent"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/TextInput/InputAccessoryView.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/TextInput/InputAccessoryView.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
@@ -76090,7 +76090,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/Keyboard/KeyboardAvoidingView.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/Keyboard/KeyboardAvoidingView.js";
   var _excluded = ["behavior", "children", "contentContainerStyle", "enabled", "keyboardVerticalOffset", "style"];
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
@@ -76303,7 +76303,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/UnimplementedViews/UnimplementedView.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/UnimplementedViews/UnimplementedView.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -76369,7 +76369,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _RCTModalHostViewNativeComponent = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[7], "./RCTModalHostViewNativeComponent"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Modal/Modal.js",
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Modal/Modal.js",
       _container;
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
@@ -76540,7 +76540,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/ReactNative/AppContainer.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/ReactNative/AppContainer.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -76722,7 +76722,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Inspector/Inspector.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Inspector/Inspector.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -77055,7 +77055,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Inspector/InspectorOverlay.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Inspector/InspectorOverlay.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -77148,7 +77148,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Inspector/ElementBox.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Inspector/ElementBox.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -77449,7 +77449,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Inspector/BorderBox.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Inspector/BorderBox.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -77503,7 +77503,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Inspector/InspectorPanel.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Inspector/InspectorPanel.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -77751,7 +77751,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Inspector/ElementProperties.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Inspector/ElementProperties.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -77985,7 +77985,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var React = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[13], "react"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/Touchable/TouchableHighlight.js",
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/Touchable/TouchableHighlight.js",
       _this4 = this;
 
   var _excluded = ["onBlur", "onFocus"];
@@ -78324,7 +78324,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var React = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[11], "react"));
 
   var _excluded = ["onBlur", "onFocus"];
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/Touchable/TouchableWithoutFeedback.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/Touchable/TouchableWithoutFeedback.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -78488,7 +78488,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Inspector/StyleInspector.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Inspector/StyleInspector.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -78601,7 +78601,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Inspector/BoxInspector.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Inspector/BoxInspector.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -78810,7 +78810,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Inspector/PerformanceOverlay.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Inspector/PerformanceOverlay.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -78909,7 +78909,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Inspector/NetworkOverlay.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Inspector/NetworkOverlay.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -79927,7 +79927,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _LogBoxNotification = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[6], "./UI/LogBoxNotification"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/LogBoxNotificationContainer.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/LogBoxNotificationContainer.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -80069,7 +80069,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var LogBoxData = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[10], "../Data/LogBoxData"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/UI/LogBoxNotification.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/UI/LogBoxNotification.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -80371,7 +80371,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var LogBoxStyle = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[6], "./LogBoxStyle"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/UI/LogBoxButton.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/UI/LogBoxButton.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -80513,7 +80513,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _Text = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[2], "../../Text/Text"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/UI/LogBoxMessage.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/UI/LogBoxMessage.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -80805,7 +80805,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/Picker/Picker.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/Picker/Picker.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -80917,7 +80917,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _processColor = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[8], "../../StyleSheet/processColor"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/Picker/PickerAndroid.android.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/Picker/PickerAndroid.android.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -81093,7 +81093,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _View = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[7], "../View/View"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/Pressable/Pressable.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/Pressable/Pressable.js";
   var _excluded = ["accessible", "android_disableSound", "android_ripple", "children", "delayLongPress", "disabled", "focusable", "onLongPress", "onPress", "onPressIn", "onPressOut", "pressRetentionOffset", "style", "testOnly_pressed"];
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -81311,7 +81311,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/ProgressViewIOS/ProgressViewIOS.android.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/ProgressViewIOS/ProgressViewIOS.android.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -81376,7 +81376,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   module.exports = DummyProgressViewIOS;
 },395,[31,32,49,35,16,17,236,338,241],"node_modules/react-native/Libraries/Components/ProgressViewIOS/ProgressViewIOS.android.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/SafeAreaView/SafeAreaView.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/SafeAreaView/SafeAreaView.js";
   var _excluded = ["emulateUnlessSupported"];
 
   var React = _$$_REQUIRE(_dependencyMap[0], "react");
@@ -81438,7 +81438,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/SegmentedControlIOS/SegmentedControlIOS.android.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/SegmentedControlIOS/SegmentedControlIOS.android.js";
 
   function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/getPrototypeOf")(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/possibleConstructorReturn")(this, result); }; }
 
@@ -81514,7 +81514,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _excluded = ["disabled", "value", "minimumValue", "maximumValue", "step", "onValueChange", "onSlidingComplete"];
 
   var _this = this,
-      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/Slider/Slider.js";
+      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/Slider/Slider.js";
 
   var React = _$$_REQUIRE(_dependencyMap[4], "react");
 
@@ -81635,7 +81635,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _SwitchNativeComponent = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[12], "./SwitchNativeComponent"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/Switch/Switch.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/Switch/Switch.js";
   var _excluded = ["disabled", "ios_backgroundColor", "onChange", "onValueChange", "style", "thumbColor", "trackColor", "value"];
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -81850,7 +81850,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/Components/TextInput/TextInput.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/Components/TextInput/TextInput.js";
 
   var React = _$$_REQUIRE(_dependencyMap[0], "react");
 
@@ -82659,7 +82659,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _PerformanceLoggerContext = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[3], "../Utilities/PerformanceLoggerContext"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/ReactNative/renderApplication.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/ReactNative/renderApplication.js";
 
   var React = _$$_REQUIRE(_dependencyMap[4], "react");
 
@@ -102474,7 +102474,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _LogBoxInspector = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[9], "./UI/LogBoxInspector"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/LogBoxInspectorContainer.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -102601,7 +102601,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _LogBoxLog = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[15], "../Data/LogBoxLog"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspector.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -102847,7 +102847,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var LogBoxData = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[12], "../Data/LogBoxData"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorCodeFrame.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorCodeFrame.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -103060,7 +103060,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var React = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[3], "react"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/UI/AnsiHighlight.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/UI/AnsiHighlight.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -103637,7 +103637,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var LogBoxStyle = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[5], "./LogBoxStyle"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorSection.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorSection.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -103727,7 +103727,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var LogBoxStyle = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[7], "./LogBoxStyle"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorFooter.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorFooter.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -103900,7 +103900,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _LogBoxMessage = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[6], "./LogBoxMessage"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorMessageHeader.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorMessageHeader.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -104067,7 +104067,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _openFileInEditor = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[10], "../../Core/Devtools/openFileInEditor"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorReactFrames.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorReactFrames.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -104334,7 +104334,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _openFileInEditor = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[11], "../../Core/Devtools/openFileInEditor"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorStackFrames.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorStackFrames.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -104591,7 +104591,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var LogBoxStyle = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[8], "./LogBoxStyle"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorSourceMapStatus.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorSourceMapStatus.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -104779,7 +104779,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var LogBoxStyle = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[7], "./LogBoxStyle"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorStackFrame.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorStackFrame.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -104916,7 +104916,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var LogBoxStyle = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[9], "./LogBoxStyle"));
 
-  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorHeader.js";
+  var _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/node_modules/react-native/Libraries/LogBox/UI/LogBoxInspectorHeader.js";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -107150,10 +107150,10 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactNative = _$$_REQUIRE(_dependencyMap[4], "react-native");
 
-  var _index = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[5], "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/src/index"));
+  var _index = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[5], "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/src/index"));
 
   var _this = this,
-      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/example/src/App.tsx";
+      _jsxFileName = "/Users/1fabiopereira/Workspace/react-native-pdf-extractor/sample/src/App.tsx";
 
   function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -107181,79 +107181,75 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
         setUri = _useState8[1];
 
     function extract() {
-      return _extract.apply(this, arguments);
-    }
-
-    function _extract() {
-      _extract = (0, _asyncToGenerator2.default)(function* () {
+      (0, _asyncToGenerator2.default)(function* () {
         var canIExtract = yield _index.default.canIExtract();
-        var uri = yield _index.default.getUri();
+        var path = yield _index.default.getUri();
 
         if (canIExtract) {
           var encrypted = yield _index.default.isEncrypted();
           var password = encrypted ? 'your-password' : undefined;
           var numOfPages = yield _index.default.getNumberOfPages(password);
-          var response = yield _index.default.getText(password);
-          setUri(uri);
+          var response = yield _index.default.getTextWithPattern(_index.Patterns.Common.Email, password);
+          setUri(path);
           setIsEncrypted(encrypted);
           setResult(response);
           setPages(numOfPages);
         }
-      });
-      return _extract.apply(this, arguments);
+      })();
     }
 
     (0, _react.useEffect)(function () {
-      (0, _asyncToGenerator2.default)(function* () {
-        return yield extract();
-      })();
+      extract();
     }, []);
     return _react.default.createElement(_reactNative.View, {
       style: styles.container,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33,
+        lineNumber: 38,
         columnNumber: 5
       }
     }, _react.default.createElement(_reactNative.Text, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34,
+        lineNumber: 39,
         columnNumber: 7
       }
     }, "URI: " + uri), _react.default.createElement(_reactNative.Text, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35,
+        lineNumber: 40,
         columnNumber: 7
       }
     }, "Number of pages: " + pages), _react.default.createElement(_reactNative.Text, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36,
+        lineNumber: 41,
         columnNumber: 7
       }
     }, "Is encrypted: " + isEncrypted), _react.default.createElement(_reactNative.Text, {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37,
+        lineNumber: 42,
         columnNumber: 7
       }
     }, "Result:"), _react.default.createElement(_reactNative.FlatList, {
       style: {},
       data: result || [],
+      keyExtractor: function keyExtractor(item) {
+        return item;
+      },
       renderItem: function renderItem(_ref2) {
         var item = _ref2.item;
         return _react.default.createElement(_reactNative.Text, {
           __self: _this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41,
+            lineNumber: 47,
             columnNumber: 53
           }
         }, item);
@@ -107261,7 +107257,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38,
+        lineNumber: 43,
         columnNumber: 7
       }
     }));
@@ -107274,7 +107270,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     }
   });
 
-  var _default = _react.default.memo(App);
+  var _default = (0, _react.memo)(App);
 
   exports.default = _default;
 },478,[3,68,8,49,1,479],"src/App.tsx");
@@ -107285,18 +107281,20 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _exportNames = {};
   exports.default = void 0;
 
-  var _asyncToGenerator2 = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/asyncToGenerator"));
+  var _toConsumableArray2 = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/toConsumableArray"));
 
-  var _reactNative = _$$_REQUIRE(_dependencyMap[2], "react-native");
+  var _asyncToGenerator2 = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/asyncToGenerator"));
 
-  Object.keys(_$$_REQUIRE(_dependencyMap[3], "./Patterns")).forEach(function (key) {
+  var _reactNative = _$$_REQUIRE(_dependencyMap[3], "react-native");
+
+  Object.keys(_$$_REQUIRE(_dependencyMap[4], "./Patterns")).forEach(function (key) {
     if (key === "default" || key === "__esModule") return;
     if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-    if (key in exports && exports[key] === _$$_REQUIRE(_dependencyMap[3], "./Patterns")[key]) return;
+    if (key in exports && exports[key] === _$$_REQUIRE(_dependencyMap[4], "./Patterns")[key]) return;
     Object.defineProperty(exports, key, {
       enumerable: true,
       get: function get() {
-        return _$$_REQUIRE(_dependencyMap[3], "./Patterns")[key];
+        return _$$_REQUIRE(_dependencyMap[4], "./Patterns")[key];
       }
     });
   });
@@ -107316,55 +107314,58 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     };
   }();
 
-  var getTextWithPattern = function () {
-    var _ref2 = (0, _asyncToGenerator2.default)(function* (pattern, password) {
-      var patterns = Array.isArray(pattern) ? pattern : [pattern];
-      var data = yield PdfExtractor.getTextWithPattern(patterns, password);
-      return Object.freeze((data == null ? void 0 : data.split('\n')) || []);
-    });
-
-    return function getTextWithPattern(_x, _x2) {
-      return _ref2.apply(this, arguments);
-    };
-  }();
-
-  var getText = function () {
-    var _ref3 = (0, _asyncToGenerator2.default)(function* (password) {
-      var data = yield PdfExtractor.getText(password);
-      return (data == null ? void 0 : data.split('\n')) || [];
-    });
-
-    return function getText(_x3) {
-      return _ref3.apply(this, arguments);
-    };
-  }();
-
   var isEncrypted = function () {
-    var _ref4 = (0, _asyncToGenerator2.default)(function* () {
+    var _ref2 = (0, _asyncToGenerator2.default)(function* () {
       return PdfExtractor.isEncrypted();
     });
 
     return function isEncrypted() {
-      return _ref4.apply(this, arguments);
+      return _ref2.apply(this, arguments);
     };
   }();
 
   var getNumberOfPages = function () {
-    var _ref5 = (0, _asyncToGenerator2.default)(function* (password) {
+    var _ref3 = (0, _asyncToGenerator2.default)(function* (password) {
       return PdfExtractor.getNumberOfPages(password);
     });
 
-    return function getNumberOfPages(_x4) {
-      return _ref5.apply(this, arguments);
+    return function getNumberOfPages(_x) {
+      return _ref3.apply(this, arguments);
     };
   }();
 
   var canIExtract = function () {
-    var _ref6 = (0, _asyncToGenerator2.default)(function* () {
+    var _ref4 = (0, _asyncToGenerator2.default)(function* () {
       return PdfExtractor.canIExtract();
     });
 
     return function canIExtract() {
+      return _ref4.apply(this, arguments);
+    };
+  }();
+
+  var getText = function () {
+    var _ref5 = (0, _asyncToGenerator2.default)(function* (password) {
+      var data = yield PdfExtractor.getText(password);
+      return (0, _toConsumableArray2.default)(new Set((data == null ? void 0 : data.split('\n')) || []));
+    });
+
+    return function getText(_x2) {
+      return _ref5.apply(this, arguments);
+    };
+  }();
+
+  var getTextWithPattern = function () {
+    var _ref6 = (0, _asyncToGenerator2.default)(function* (pattern, password) {
+      var patterns = Array.isArray(pattern) ? pattern : [pattern];
+      var data = yield getText(password);
+      var matches = patterns.map(function (regex) {
+        return (0, _$$_REQUIRE(_dependencyMap[5], "./Match").Match)(new RegExp(regex), data);
+      });
+      return (0, _toConsumableArray2.default)(new Set(matches)).flat();
+    });
+
+    return function getTextWithPattern(_x3, _x4) {
       return _ref6.apply(this, arguments);
     };
   }();
@@ -107378,7 +107379,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     isEncrypted: isEncrypted
   };
   exports.default = _default;
-},479,[480,481,1,482],"../src/index.tsx");
+},479,[480,481,487,1,488,489],"../src/index.tsx");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -107388,6 +107389,59 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
 },480,[],"../node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  function _toConsumableArray(arr) {
+    return _$$_REQUIRE(_dependencyMap[0], "./arrayWithoutHoles.js")(arr) || _$$_REQUIRE(_dependencyMap[1], "./iterableToArray.js")(arr) || _$$_REQUIRE(_dependencyMap[2], "./unsupportedIterableToArray.js")(arr) || _$$_REQUIRE(_dependencyMap[3], "./nonIterableSpread.js")();
+  }
+
+  module.exports = _toConsumableArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+},481,[482,484,485,486],"../node_modules/@babel/runtime/helpers/toConsumableArray.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  function _arrayWithoutHoles(arr) {
+    if (Array.isArray(arr)) return _$$_REQUIRE(_dependencyMap[0], "./arrayLikeToArray.js")(arr);
+  }
+
+  module.exports = _arrayWithoutHoles, module.exports.__esModule = true, module.exports["default"] = module.exports;
+},482,[483],"../node_modules/@babel/runtime/helpers/arrayWithoutHoles.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  function _arrayLikeToArray(arr, len) {
+    if (len == null || len > arr.length) len = arr.length;
+
+    for (var i = 0, arr2 = new Array(len); i < len; i++) {
+      arr2[i] = arr[i];
+    }
+
+    return arr2;
+  }
+
+  module.exports = _arrayLikeToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+},483,[],"../node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  function _iterableToArray(iter) {
+    if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
+  }
+
+  module.exports = _iterableToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+},484,[],"../node_modules/@babel/runtime/helpers/iterableToArray.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  function _unsupportedIterableToArray(o, minLen) {
+    if (!o) return;
+    if (typeof o === "string") return _$$_REQUIRE(_dependencyMap[0], "./arrayLikeToArray.js")(o, minLen);
+    var n = Object.prototype.toString.call(o).slice(8, -1);
+    if (n === "Object" && o.constructor) n = o.constructor.name;
+    if (n === "Map" || n === "Set") return Array.from(o);
+    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _$$_REQUIRE(_dependencyMap[0], "./arrayLikeToArray.js")(o, minLen);
+  }
+
+  module.exports = _unsupportedIterableToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
+},485,[483],"../node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  function _nonIterableSpread() {
+    throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+
+  module.exports = _nonIterableSpread, module.exports.__esModule = true, module.exports["default"] = module.exports;
+},486,[],"../node_modules/@babel/runtime/helpers/nonIterableSpread.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
     try {
@@ -107426,7 +107480,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   }
 
   module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exports["default"] = module.exports;
-},481,[],"../node_modules/@babel/runtime/helpers/asyncToGenerator.js");
+},487,[],"../node_modules/@babel/runtime/helpers/asyncToGenerator.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -107443,13 +107497,38 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     Brazil: Brazil
   };
   exports.Patterns = Patterns;
-},482,[],"../src/Patterns.ts");
+},488,[],"../src/Patterns.ts");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.Match = void 0;
+
+  var _toConsumableArray2 = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault")(_$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/toConsumableArray"));
+
+  var reducer = function reducer(pattern) {
+    return function (line) {
+      var regexp = pattern.global ? pattern : new RegExp(pattern, 'g');
+      return line.match(regexp);
+    };
+  };
+
+  var Match = function Match(pattern, data) {
+    if (!data) return [];
+    var matches = data.map(reducer(pattern)).flat();
+    return (0, _toConsumableArray2.default)(new Set(matches)).filter(function (value) {
+      return value;
+    });
+  };
+
+  exports.Match = Match;
+},489,[480,481],"../src/Match.ts");
 __d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
   module.exports = {
   "name": "PdfExtractorExample",
   "displayName": "PDF Extractor Example"
 }
 ;
-},483,[],"app.json");
+},490,[],"app.json");
 __r(88);
 __r(0);
