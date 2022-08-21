@@ -1,5 +1,6 @@
 const reducer = (pattern: RegExp) => (matches: string[], line: string) => {
-  const iterator = line.matchAll(pattern);
+  const regexp = pattern.global ? pattern : new RegExp(pattern, 'g');
+  const iterator = line.matchAll(regexp);
   let stop = false;
 
   do {

@@ -1,5 +1,5 @@
 import { NativeModules, Platform } from 'react-native';
-import { Match } from './match';
+import { Match } from './Match';
 export * from './Patterns';
 
 const PdfExtractor = Platform.select({
@@ -12,12 +12,12 @@ const getUri = async (): Promise<string | undefined> => {
 };
 
 const getTextWithPattern = async (
-  pattern: RegExp | RegExp[],
+  pattern: string | string[],
   password?: string
 ): Promise<(string | null | undefined)[]> => {
   const patterns = Array.isArray(pattern) ? pattern : [pattern];
   const data = await PdfExtractor.getText(password);
-  return patterns.map((regex) => Match(regex, data)).flat();
+  return patterns.map((regex) => Match(new RegExp(regex), data)).flat();
 };
 
 const getText = async (password?: string): Promise<string[]> => {

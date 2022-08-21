@@ -89,7 +89,7 @@ describe('React Native Pdf Extractor', () => {
       async (
         _: string,
         password: string | undefined,
-        patterns: RegExp | RegExp[]
+        patterns: string | string[]
       ) => {
         const getTextSpy = jest.spyOn(Module, 'getText');
 

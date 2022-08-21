@@ -4,7 +4,7 @@ describe('Patterns', () => {
   describe('Common', () => {
     describe('Email', () => {
       const cases = Patterns.Common.Email.map(
-        (_, index): [string, RegExp, boolean][] => {
+        (_, index): [string, string, boolean][] => {
           return [
             ['match', Patterns.Common.Email[index], true],
             ['not match', Patterns.Common.Email[index], false],
@@ -13,11 +13,11 @@ describe('Patterns', () => {
       ).flat();
       it.each(cases)(
         'Should %s string with pattern %s',
-        (_: string, __: RegExp, value: boolean) => {
+        (_: string, __: string, value: boolean) => {
           const email = value
             ? 'name.lastname@provider.com'
             : 'email.provedor.com';
-          const patterns = Patterns.Common.Email;
+          const patterns = Patterns.Common.Email.map(pattern => new RegExp(pattern));
 
           const matches =
             patterns
@@ -45,7 +45,7 @@ describe('Patterns', () => {
       ];
 
       const cases = Patterns.Brazil.BankSlip.map(
-        (_, index): [string, RegExp, boolean, number][] => {
+        (_, index): [string, string, boolean, number][] => {
           return [
             ['match', Patterns.Brazil.BankSlip[index], true, index],
             ['not match', Patterns.Brazil.BankSlip[index], false, index],
@@ -55,9 +55,11 @@ describe('Patterns', () => {
 
       it.each(cases)(
         'Should %s string with pattern %s',
-        (_: string, __: RegExp, value: boolean, index: number) => {
+        (_: string, __: string, value: boolean, index: number) => {
           const data = value ? formats[index] : wrongFormats[index];
-          const patterns = Patterns.Brazil.BankSlip;
+          const patterns = Patterns.Brazil.BankSlip.map(
+            (pattern) => new RegExp(pattern)
+          );
 
           const matches =
             patterns
