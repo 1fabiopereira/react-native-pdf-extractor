@@ -5,10 +5,6 @@
 You need to add the following config on your `android/app/main/AndroidManifest.xml`:
 
 ```xml
-  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-```
-
-```xml
 <intent-filter>
   <action android:name="android.intent.action.VIEW" />
   <category android:name="android.intent.category.DEFAULT" />
