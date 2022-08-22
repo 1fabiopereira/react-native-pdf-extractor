@@ -8,6 +8,13 @@ This function returns a `Promise<boolean>` that determine if you received an uri
 async function canIExtract(): Promise<boolean>
 ```
 
+### setUri
+
+This function receive a `string` that represents a path of PDF file and use it to perform data extraction, and returns a uri generated from received path.
+
+```ts
+async function setUri(path: string): Promise<string>
+```
 ### getUri
 
 This function returns a `Promise<string | undefined>` that contains uri received from Android `Intent`.

@@ -1,0 +1,19 @@
+# root
+.github/
+.husky/
+coverage/
+sample/
+scripts/
+
+# lib
+lib/typescript/sample/
+lib/typescript/src/__tests__/
+
+# android
+android/.gradle/
+android/.idea/
+android/build/
+android/local.properties
+
+# docs
+website/
