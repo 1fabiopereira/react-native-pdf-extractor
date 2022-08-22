@@ -195,7 +195,7 @@ dependencies {
     implementation "com.facebook.react:react-native:+"
     implementation ("com.android.support:multidex:1.0.3")
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
-    implementation project(':reactnativepdfextractor')
+    implementation project(':react-native-pdf-extractor')
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";

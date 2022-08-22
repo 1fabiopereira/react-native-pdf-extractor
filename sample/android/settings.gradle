@@ -3,7 +3,7 @@ apply from: file("../node_modules/@react-native-community/cli-platform-android/n
 
 include ':app'
 
-include ':reactnativepdfextractor'
-project(':reactnativepdfextractor').projectDir = new File(rootProject.projectDir, '../../android')
+include ':react-native-pdf-extractor'
+project(':react-native-pdf-extractor').projectDir = new File(rootProject.projectDir, '../../android')
 
 includeBuild('../../node_modules/react-native-gradle-plugin')

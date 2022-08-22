@@ -29,8 +29,8 @@ If you're using RN 0.60 or higher, you can benefit from autolinking. You can pro
 On your `android/settings.gradle` file you need to add the following lines:
 
 ```groovy
-include ':reactnativepdfextractor'
-project(':reactnativepdfextractor').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-pdf-extrctor/android')
+include ':react-native-pdf-extractor'
+project(':react-native-pdf-extractor').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-pdf-extrctor/android')
 
 ```
 
