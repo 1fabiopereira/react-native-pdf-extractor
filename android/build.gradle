@@ -14,7 +14,6 @@ buildscript {
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.0"
     classpath 'com.dicedmelon.gradle:jacoco-android:0.1.5'
-
   }
 }
 
@@ -139,8 +138,6 @@ dependencies {
 
   // Project dependencies
   implementation('com.tom-roush:pdfbox-android:2.0.23.0')
-  implementation('org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.3')
-  implementation('org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.3')
   implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
 
 

@@ -4,6 +4,7 @@
 coverage/
 sample/
 scripts/
+src/
 
 # lib
 lib/typescript/sample/
@@ -13,6 +14,7 @@ lib/typescript/src/__tests__/
 android/.gradle/
 android/.idea/
 android/build/
+android/src/test/
 android/local.properties
 
 # docs
