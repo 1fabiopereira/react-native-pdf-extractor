@@ -52,6 +52,10 @@ jobs:
     - name: Lint
       run: yarn lint
 
+    # Perform check for circular dependencies
+    - name: Check circular dependencies
+      run: yarn circular
+
     # Run Jest Unit Tests
     - name: Run Jest Unit Tests
       run: yarn test

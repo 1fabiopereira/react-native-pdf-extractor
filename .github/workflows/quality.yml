@@ -36,6 +36,9 @@ jobs:
     - name: Lint
       run: yarn lint
 
+    - name: Check circular dependencies
+      run: yarn circular
+
     - name: Run Jest Unit Tests
       run: yarn test
 
