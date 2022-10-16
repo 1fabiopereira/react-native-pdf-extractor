@@ -34,8 +34,7 @@ const App: React.FC = (): JSX.Element => {
 
   function extractFromIntent() {
     (async () => {
-      const extractor = new Extractor();
-      const response = await extractor.extractFromIntent(
+      const response = await Extractor.extractFromIntent(
         Patterns.Brazil.BankSlip
       );
       apply(response);
@@ -44,8 +43,7 @@ const App: React.FC = (): JSX.Element => {
 
   function extract(path: string) {
     (async () => {
-      const extractor = new Extractor();
-      const response = await extractor.extract(path, Patterns.Brazil.BankSlip);
+      const response = await Extractor.extract(path, Patterns.Brazil.BankSlip);
       apply(response);
     })();
   }

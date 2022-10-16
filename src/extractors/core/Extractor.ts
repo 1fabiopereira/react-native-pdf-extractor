@@ -1,11 +1,16 @@
 import { BaseExtractor } from './BaseExtractor';
 import { Chain, ChainLink } from '../../chains';
-import type { TransientObject, Patterns, Action } from '../../types';
+import type {
+  Action,
+  DataExtractor,
+  Patterns,
+  TransientObject,
+} from '../../types';
 
-export class Extractor extends BaseExtractor {
+class InternalExtractor extends BaseExtractor implements DataExtractor {
   private async prepareURI(
     data: TransientObject,
-    ctx: Extractor
+    ctx: InternalExtractor
   ): Promise<TransientObject> {
     if (data.uri) {
       const path = await ctx.setUri(data.uri);
@@ -18,7 +23,7 @@ export class Extractor extends BaseExtractor {
 
   private async checkEnv(
     data: TransientObject,
-    ctx: Extractor
+    ctx: InternalExtractor
   ): Promise<TransientObject> {
     const canIExtract = await ctx.canIExtract();
 
@@ -31,7 +36,7 @@ export class Extractor extends BaseExtractor {
 
   private async getPages(
     data: TransientObject,
-    ctx: Extractor
+    ctx: InternalExtractor
   ): Promise<TransientObject> {
     const pages = await ctx.getNumberOfPages();
     return Promise.resolve({ ...data, pages });
@@ -39,7 +44,7 @@ export class Extractor extends BaseExtractor {
 
   private async applyPassword(
     data: TransientObject,
-    ctx: Extractor
+    ctx: InternalExtractor
   ): Promise<TransientObject> {
     const isEncrypted = await ctx.isEncrypted();
 
@@ -54,7 +59,7 @@ export class Extractor extends BaseExtractor {
 
   private async getMatches(
     data: TransientObject,
-    ctx: Extractor
+    ctx: InternalExtractor
   ): Promise<TransientObject> {
     const text = !data.patterns
       ? await ctx.getText()
@@ -93,3 +98,5 @@ export class Extractor extends BaseExtractor {
     return { ...data, duration: `${finish - start}ms` };
   }
 }
+
+export const Extractor = new InternalExtractor() as DataExtractor;

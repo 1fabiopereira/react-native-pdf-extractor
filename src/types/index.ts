@@ -17,3 +17,17 @@ export type TransientObject = {
   text?: TextResult;
   uri?: string;
 };
+
+export interface PDFExtractor {
+  getUri: () => Promise<string | undefined>;
+  isEncrypted: () => Promise<boolean>;
+  setUri: (uri: string) => Promise<string | undefined>;
+  canIExtract: () => Promise<boolean>;
+  getNumberOfPages: (password?: string) => Promise<number>;
+  getText: (password?: string) => Promise<string | undefined>;
+}
+
+export interface DataExtractor {
+  extract: (uri?: string, patterns?: Patterns) => Promise<TransientObject>;
+  extractFromIntent: (patterns?: Patterns) => Promise<TransientObject>;
+}
