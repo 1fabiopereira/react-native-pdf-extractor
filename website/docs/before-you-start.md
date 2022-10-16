@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Before you start
 
 React Native Pdf Extractor is a module, created to be used alongside [React Native](https://github.com/facebook/react-native), so previous experience is required. If you need, can start with their [Getting Started](https://reactnative.dev/docs/getting-started) tutorial and come back here after.

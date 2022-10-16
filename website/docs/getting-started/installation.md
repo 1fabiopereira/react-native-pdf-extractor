@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Installation
 ## Requirements
 
@@ -41,7 +45,3 @@ On `android/app/src/main/java/<your-project-package>/MainApplication.java` file 
 ```java
 packages.add(new PdfExtractorPackage());
 ```
-
-## Troubleshooting
-
-#### Working in progress

@@ -1,4 +1,10 @@
-# Methods
+---
+sidebar_position: 2
+---
+
+# BaseExtractor
+
+It is the extractor with greater granularity, basically it is a wrapper for the native module, it is exported along with the other resources, allowing new extractors to be built that extend it.
 
 ### canIExtract
 
@@ -37,23 +43,6 @@ This function returns a `Promise<number>` that determine the pdf file number of 
 ```ts
 async function getNumberOfPages(): Promise<boolean>
 ```
-
-<table>
-    <th>name</th>
-    <th>type</th>
-    <th>default</th>
-    <th>required</th>
-    <th>description</th>
-    <tbody>
-        <tr>
-            <td>password</td>
-            <td>string | undefined</td>
-            <td>undefined</td>
-            <td>false</td>
-            <td>password of pdf file</td>
-        </tr>
-    </tbody>
-</table>
 
 ### getText
 
@@ -114,5 +103,3 @@ async function getTextWithPattern(
         </tr>
     </tbody>
 </table>
-
-__NOTE:__ All patterns passed will be converted in RegExp on runtime, yours patterns need to be in according to Javascript's RegExp specification, but in `string` type, ex: `'([0-9]{12})\\s([0-9]{12})\\s([0-9]{12})\\s([0-9]{12})'`. You can see more infomation [here](https://www.w3schools.com/jsref/jsref_obj_regexp.asp#:~:text=RegExp%20Object,pattern%20with%20Properties%20and%20Methods.).
