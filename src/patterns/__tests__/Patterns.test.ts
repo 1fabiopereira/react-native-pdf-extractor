@@ -17,7 +17,9 @@ describe('Patterns', () => {
           const email = value
             ? 'name.lastname@provider.com'
             : 'email.provedor.com';
-          const patterns = Patterns.Common.Email.map(pattern => new RegExp(pattern));
+          const patterns = Patterns.Common.Email.map(
+            (pattern) => new RegExp(pattern)
+          );
 
           const matches =
             patterns

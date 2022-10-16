@@ -1,31 +1,18 @@
 import { NativeModules } from 'react-native';
-import Extractor, { Patterns } from '..';
+import { Patterns } from '../../patterns';
+import { BaseExtractor } from '../core/BaseExtractor';
 
 const Module = NativeModules.PdfExtractor;
 
-jest.mock('react-native', () => ({
-  Platform: {
-    select: jest.fn(({ android }) => android),
-  },
-  NativeModules: {
-    PdfExtractor: {
-      canIExtract: jest.fn(),
-      getNumberOfPages: jest.fn(),
-      getText: jest.fn(),
-      getUri: jest.fn(),
-      isEncrypted: jest.fn(),
-    },
-  },
-}));
-
-describe('React Native Pdf Extractor', () => {
+describe('BaseExtractor', () => {
   beforeEach(() => jest.clearAllMocks());
 
   describe('canIExtract', () => {
     it('Should call canIExtract correctly', async () => {
       const canIExtractSpy = jest.spyOn(Module, 'canIExtract');
+      const baseExtractor = new BaseExtractor();
 
-      await Extractor.canIExtract();
+      await baseExtractor.canIExtract();
 
       expect(canIExtractSpy).toBeCalledTimes(1);
     });
@@ -34,8 +21,9 @@ describe('React Native Pdf Extractor', () => {
   describe('isEncrypted', () => {
     it('Should call isEncrypted correctly', async () => {
       const isEncryptedSpy = jest.spyOn(Module, 'isEncrypted');
+      const baseExtractor = new BaseExtractor();
 
-      await Extractor.isEncrypted();
+      await baseExtractor.isEncrypted();
 
       expect(isEncryptedSpy).toBeCalledTimes(1);
     });
@@ -44,10 +32,22 @@ describe('React Native Pdf Extractor', () => {
   describe('getUri', () => {
     it('Should call getUri correctly', async () => {
       const getUriSpy = jest.spyOn(Module, 'getUri');
+      const baseExtractor = new BaseExtractor();
 
-      await Extractor.getUri();
+      await baseExtractor.getUri();
 
       expect(getUriSpy).toBeCalledTimes(1);
+    });
+  });
+
+  describe('setUri', () => {
+    it('Should call setUri correctly', async () => {
+      const setUriSpy = jest.spyOn(Module, 'setUri');
+      const baseExtractor = new BaseExtractor();
+
+      await baseExtractor.setUri('any-uri');
+
+      expect(setUriSpy).toBeCalledTimes(1);
     });
   });
 
@@ -59,8 +59,9 @@ describe('React Native Pdf Extractor', () => {
       'Should call getNumberOfPages correctly %s',
       async (_: string, password) => {
         const getNumberOfPagesSpy = jest.spyOn(Module, 'getNumberOfPages');
+        const baseExtractor = new BaseExtractor();
 
-        await Extractor.getNumberOfPages(password);
+        await baseExtractor.getNumberOfPages(password);
 
         expect(getNumberOfPagesSpy).toBeCalledTimes(1);
       }
@@ -73,8 +74,9 @@ describe('React Native Pdf Extractor', () => {
       ['without password', undefined],
     ])('Should call getText correctly %s', async (_: string, password) => {
       const getTextSpy = jest.spyOn(Module, 'getText');
+      const baseExtractor = new BaseExtractor();
 
-      await Extractor.getText(password);
+      await baseExtractor.getText(password);
 
       expect(getTextSpy).toBeCalledTimes(1);
     });
@@ -92,8 +94,9 @@ describe('React Native Pdf Extractor', () => {
         patterns: string | string[]
       ) => {
         const getTextSpy = jest.spyOn(Module, 'getText');
+        const baseExtractor = new BaseExtractor();
 
-        await Extractor.getTextWithPattern(patterns, password);
+        await baseExtractor.getTextWithPattern(patterns, password);
 
         expect(getTextSpy).toBeCalledTimes(1);
       }

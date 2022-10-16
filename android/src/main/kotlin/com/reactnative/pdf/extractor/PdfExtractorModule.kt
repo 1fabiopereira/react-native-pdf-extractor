@@ -19,21 +19,32 @@ class PdfExtractorModule(reactContext: ReactApplicationContext) : ReactContextBa
   }
 
   fun getCurrentUri(): Uri? {
-    return if (path !== null) path else currentActivity?.intent?.data
+    try {
+      return if (path !== null) path else currentActivity?.intent?.data
+    } catch (e: Exception) {
+      e.printStackTrace()
+      return null
+    }
   }
 
-  fun getCurrentResolver(): ContentResolver? {
-    return currentActivity?.contentResolver
+  private fun getCurrentResolver(): ContentResolver? {
+    try {
+      return currentActivity?.contentResolver
+    } catch (e: Exception) {
+      e.printStackTrace()
+      return null
+    }
   }
 
   @ReactMethod
   fun getUri(promise: Promise) {
-    val uri = getCurrentUri()
-    val path = if(uri !== null) uri.toString() else null
-
     try {
+      val uri = getCurrentUri()
+      val path = if(uri !== null) uri.toString() else null
+
       return promise.resolve(path)
     } catch (e:Exception) {
+      e.printStackTrace()
       return promise.resolve(null)
     }
   }
@@ -44,52 +55,62 @@ class PdfExtractorModule(reactContext: ReactApplicationContext) : ReactContextBa
       path = Uri.parse(uri)
       return promise.resolve(path.toString())
     } catch (e: Exception) {
+      e.printStackTrace()
       return promise.reject(e)
     }
   }
 
   @ReactMethod
   fun canIExtract(promise: Promise) {
-    val uri = getCurrentUri()
-    val resolver = getCurrentResolver()
-    return promise.resolve(uri !== null && resolver !== null)
+    try {
+      val uri = getCurrentUri()
+      val resolver = getCurrentResolver()
+
+      return promise.resolve(uri !== null && resolver !== null)
+    } catch (e: Exception) {
+      e.printStackTrace()
+      return promise.reject(e)
+    }
   }
 
   @ReactMethod
   fun getText(password: String?, promise: Promise) {
-    val uri = getCurrentUri()
-    val resolver = getCurrentResolver()
-
     try {
+      val uri = getCurrentUri()
+      val resolver = getCurrentResolver()
+
       val data = PdfHandler.getText(uri, resolver, password)
       return promise.resolve(data)
     } catch (e: Exception) {
+      e.printStackTrace()
       return promise.reject(e)
     }
   }
 
   @ReactMethod
   fun isEncrypted(promise: Promise) {
-    val uri = getCurrentUri()
-    val resolver = getCurrentResolver()
-
     try {
+      val uri = getCurrentUri()
+      val resolver = getCurrentResolver()
+
       val data = PdfHandler.isEncrypted(uri, resolver)
       return promise.resolve(data)
     } catch (e: Exception) {
+      e.printStackTrace()
       return promise.reject(e)
     }
   }
 
   @ReactMethod
   fun getNumberOfPages(password: String?, promise: Promise) {
-    val uri = getCurrentUri()
-    val resolver = getCurrentResolver()
-
     try {
+      val uri = getCurrentUri()
+      val resolver = getCurrentResolver()
+
       val data = PdfHandler.getNumberOfPages(uri, resolver, password)
       return promise.resolve(data)
     } catch (e: Exception) {
+      e.printStackTrace()
       return promise.reject(e)
     }
   }
