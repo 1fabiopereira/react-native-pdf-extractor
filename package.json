@@ -14,7 +14,7 @@
     "test": "jest --coverage --detectOpenHandles",
     "type-check": "tsc --noEmit",
     "sonar": "sonar-scanner -Dsonar.host.url=https://sonarcloud.io",
-    "circular": "npx madge --circular src/index.tsx --no-spinner --warning"
+    "circular": "madge --circular index.ts --no-spinner --warning"
   },
   "keywords": [
     "react-native",
