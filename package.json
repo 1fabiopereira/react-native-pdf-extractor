@@ -5,10 +5,11 @@
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
   "types": "lib/typescript/src/index.d.ts",
-  "react-native": "src/index.tsx",
-  "source": "src/index",
+  "react-native": "index.ts",
+  "source": "index.ts",
   "scripts": {
     "build": "bob build",
+    "docs": "cd website && yarn install && yarn dev",
     "lint": "eslint \"src/*.{js,ts,tsx}\" --fix",
     "test": "jest --coverage --detectOpenHandles",
     "type-check": "tsc --noEmit",

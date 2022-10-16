@@ -1,6 +1,6 @@
 {
   "name": "react-native-pdf-extractor-example",
-  "description": "Example app for react-native-pdf-extractor",
+  "description": "Sample app for react-native-pdf-extractor",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "react": "18.1.0",
-    "react-native": "0.64.1"
+    "react-native": "0.64.1",
+    "react-native-document-picker": "^8.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",

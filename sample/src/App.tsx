@@ -1,44 +1,66 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState, memo } from 'react';
-import { FlatList, StyleSheet, Text, View } from 'react-native';
-import Extractor, { Patterns } from 'react-native-pdf-extractor';
+import { Button, FlatList, StyleSheet, Text, View } from 'react-native';
+import DocumentPicker from 'react-native-document-picker';
+
+import { Extractor, Patterns } from '../..';
 
 const App: React.FC = (): JSX.Element => {
-  const [result, setResult] = useState<string[]>([]);
-  const [pages, setPages] = useState<number>(0);
-  const [isEncrypted, setIsEncrypted] = useState<boolean>(false);
+  const [isEncrypted, setIsEncrypted] = useState<boolean | undefined>(false);
+  const [pages, setPages] = useState<number | undefined>(0);
+  const [result, setResult] = useState<string[] | undefined>([]);
   const [uri, setUri] = useState<string | undefined>();
+  const [time, setTime] = useState<string | undefined>();
 
-  function extract() {
+  function selectFile() {
     (async () => {
-      const canIExtract = await Extractor.canIExtract();
-      const path = await Extractor.getUri();
+      const response = await DocumentPicker.pickSingle({
+        presentationStyle: 'fullScreen',
+        copyTo: 'cachesDirectory',
+        type: 'application/pdf',
+      });
 
-      if (canIExtract) {
-        const encrypted = await Extractor.isEncrypted();
-        const password = encrypted ? 'your-password' : undefined;
-        const numOfPages = await Extractor.getNumberOfPages(password);
-        const response = await Extractor.getTextWithPattern(
-          Patterns.Common.Email,
-          password
-        );
+      extract(response.uri);
+    })();
+  }
 
-        setUri(path);
-        setIsEncrypted(encrypted);
-        setResult(response as string[]);
-        setPages(numOfPages);
-      }
+  function apply(response: any) {
+    setPages(response.pages);
+    setIsEncrypted(response.isEncrypted);
+    setUri(response.uri);
+    setTime(response.duration);
+    setResult(response.text as string[]);
+  }
+
+  function extractFromIntent() {
+    (async () => {
+      const extractor = new Extractor();
+      const response = await extractor.extractFromIntent(
+        Patterns.Brazil.BankSlip
+      );
+      apply(response);
+    })();
+  }
+
+  function extract(path: string) {
+    (async () => {
+      const extractor = new Extractor();
+      const response = await extractor.extract(path, Patterns.Brazil.BankSlip);
+      apply(response);
     })();
   }
 
   useEffect(() => {
-    extract();
+    extractFromIntent();
   }, []);
 
   return (
     <View style={styles.container}>
+      <Button title="Select file" onPress={selectFile} />
       <Text>{`URI: ${uri}`}</Text>
       <Text>{`Number of pages: ${pages}`}</Text>
       <Text>{`Is encrypted: ${isEncrypted}`}</Text>
+      <Text>{`Execution time: ${time}`}</Text>
       <Text>Result:</Text>
       <FlatList
         style={{}}

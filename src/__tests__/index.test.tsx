@@ -1,5 +1,5 @@
 import { NativeModules } from 'react-native';
-import Extractor, { Patterns } from '..';
+import Extractor, { Patterns } from '../core/extractors/core/BaseExtractor';
 
 const Module = NativeModules.PdfExtractor;
 

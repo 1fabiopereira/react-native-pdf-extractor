@@ -195,7 +195,9 @@ dependencies {
     implementation "com.facebook.react:react-native:+"
     implementation ("com.android.support:multidex:1.0.3")
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
     implementation project(':react-native-pdf-extractor')
+    implementation project(':react-native-document-picker')
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
@@ -213,4 +215,5 @@ task copyDownloadableDepsToLibs(type: Copy) {
     into 'libs'
 }
 
-apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle");
+applyNativeModulesAppBuildGradle(project)

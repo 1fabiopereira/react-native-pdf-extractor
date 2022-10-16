@@ -1,4 +1,4 @@
-import { Patterns } from '..';
+import { Patterns } from '../core/extractors/core/BaseExtractor';
 import { Match } from '../Match';
 
 describe('Match', () => {

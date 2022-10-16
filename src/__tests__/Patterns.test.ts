@@ -1,4 +1,4 @@
-import { Patterns } from '../';
+import { Patterns } from '../core/extractors/core/BaseExtractor';
 
 describe('Patterns', () => {
   describe('Common', () => {
