@@ -13,7 +13,7 @@ export class Chain {
     }
   }
 
-  async exec<T, U>(data?: T, ctx: U): Promise<any> {
+  async exec<T, U>(data?: T, ctx?: U): Promise<any> {
     if (this.entryPoint) {
       return await this.entryPoint.handle(data, ctx);
     }
