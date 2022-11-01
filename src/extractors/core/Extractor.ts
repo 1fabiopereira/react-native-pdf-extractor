@@ -52,8 +52,6 @@ class InternalExtractor extends BaseExtractor implements DataExtractor {
       return Promise.resolve({ ...data, isEncrypted });
     }
 
-    // TODO: implement a way to get user password
-
     throw new Error('You need provide password to continue with extraction.');
   }
 
