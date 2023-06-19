@@ -8,6 +8,7 @@ const config: Config = {
     '<rootDir>/lib/',
   ],
   setupFiles: ['<rootDir>/.jest/jest.setup.ts'],
+  setupFilesAfterEnv: ['@testing-library/jest-native/extend-expect'],
 };
 
 export default config;
