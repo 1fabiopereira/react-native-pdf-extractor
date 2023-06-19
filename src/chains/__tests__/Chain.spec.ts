@@ -6,10 +6,9 @@ jest.mock('../core/ChainLink');
 describe('Chain', () => {
   it('Should call exec method', async () => {
     const chain = new Chain([]);
-    const ctx = jest.fn();
     const chainSpy = jest.spyOn(chain, 'exec');
 
-    await chain.exec('any-string', ctx);
+    await chain.exec('any-string');
 
     expect(chainSpy).toBeCalledTimes(1);
   });
@@ -29,12 +28,11 @@ describe('Chain', () => {
   it('Should call ChainLink handle when exec runs', async () => {
     const chainLinkOne = new ChainLink(jest.fn());
     const chainLinkTwo = new ChainLink(jest.fn());
-    const ctx = jest.fn();
 
     const chain = new Chain([chainLinkOne, chainLinkTwo]);
     const chainSpy = jest.spyOn(chain, 'exec');
 
-    await chain.exec('any-string', ctx);
+    await chain.exec('any-string');
 
     expect(chainLinkOne.handle).toBeCalledTimes(1);
     expect(chainSpy).toBeCalledTimes(1);
