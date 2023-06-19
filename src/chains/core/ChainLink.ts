@@ -9,8 +9,8 @@ export class ChainLink extends AbstractChain {
     this.action = action;
   }
 
-  async handle<T, U>(data: T, ctx: U): Promise<T> {
-    const result = await this.action(data, ctx);
-    return await super.handle(result, ctx);
+  async handle<T>(data: T): Promise<T> {
+    const result = await this.action(data);
+    return await super.handle(result);
   }
 }

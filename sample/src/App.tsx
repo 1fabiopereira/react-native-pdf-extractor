@@ -1,9 +1,9 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState, memo } from 'react';
+import React, { useState, memo } from 'react';
 import { Button, FlatList, StyleSheet, Text, View } from 'react-native';
 import DocumentPicker from 'react-native-document-picker';
 
 import { Extractor, Patterns } from '../..';
+import { TransientObject } from '../../src/types';
 
 const App: React.FC = (): JSX.Element => {
   const [isEncrypted, setIsEncrypted] = useState<boolean | undefined>(false);
@@ -12,45 +12,23 @@ const App: React.FC = (): JSX.Element => {
   const [uri, setUri] = useState<string | undefined>();
   const [time, setTime] = useState<string | undefined>();
 
-  function selectFile() {
-    (async () => {
-      const response = await DocumentPicker.pickSingle({
-        presentationStyle: 'fullScreen',
-        copyTo: 'cachesDirectory',
-        type: 'application/pdf',
-      });
+  const selectFile = async () => {
+    const data = await DocumentPicker.pickSingle({
+      presentationStyle: 'fullScreen',
+      copyTo: 'cachesDirectory',
+      type: 'application/pdf',
+    });
 
-      extract(response.uri);
-    })();
-  }
+    setUri(data.uri);
+  };
 
-  function apply(response: any) {
-    setPages(response.pages);
-    setIsEncrypted(response.isEncrypted);
-    setUri(response.uri);
-    setTime(response.duration);
-    setResult(response.text as string[]);
-  }
-
-  function extractFromIntent() {
-    (async () => {
-      const response = await Extractor.extractFromIntent(
-        Patterns.Brazil.BankSlip
-      );
-      apply(response);
-    })();
-  }
-
-  function extract(path: string) {
-    (async () => {
-      const response = await Extractor.extract(path, Patterns.Brazil.BankSlip);
-      apply(response);
-    })();
-  }
-
-  useEffect(() => {
-    extractFromIntent();
-  }, []);
+  const onResult = (data: TransientObject) => {
+    setPages(data.pages);
+    setIsEncrypted(data.isEncrypted);
+    setUri(data.uri);
+    setTime(data.duration);
+    setResult(data.text as string[]);
+  };
 
   return (
     <View style={styles.container}>
@@ -61,10 +39,15 @@ const App: React.FC = (): JSX.Element => {
       <Text>{`Execution time: ${time}`}</Text>
       <Text>Result:</Text>
       <FlatList
-        style={{}}
         data={result || []}
         keyExtractor={(item) => item}
         renderItem={({ item }: { item: string }) => <Text>{item}</Text>}
+      />
+      <Extractor
+        onResult={onResult}
+        patterns={Patterns.Brazil.BankSlip}
+        uri={uri}
+        fromIntent
       />
     </View>
   );

@@ -16,9 +16,9 @@ export class Chain {
     }
   }
 
-  async exec<T, U>(data?: T, ctx?: U): Promise<any> {
+  async exec<T>(data?: T): Promise<any> {
     if (this.chain) {
-      return await this.chain.handle(data, ctx);
+      return await this.chain.handle(data);
     }
 
     return await Promise.resolve(null);
