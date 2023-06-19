@@ -4,6 +4,11 @@ sidebar_position: 2
 
 # Configuration
 
+> :bulb: Android only.
+
+> :bulb: The steps below are required only if you intend to use [Android Intent Action](https://developer.android.com/reference/android/content/Intent).
+
+
 ### AndroidManifest.xml
 
 You need to add the following config on your `android/app/main/AndroidManifest.xml`:

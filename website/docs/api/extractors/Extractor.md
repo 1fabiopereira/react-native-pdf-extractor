@@ -4,71 +4,72 @@ sidebar_position: 1
 
 # Extractor
 
-This extractor is built on top of [BaseExtractor](/docs/api/extractors/BaseExtractor), and exposes two methods for extracting data.
-
-## extract
-
-This function receive a path and patterns to find matches (optional) and returns `Promise<TransientObject>` that is data extraction result. In case that no patterns was passed it's returns a list with all file text separated by lines.
-
-```ts
-async function extract(uri: string, patterns?: string | string[]): Promise<TransientObject>
-```
+This extractor is built on top of [BaseExtractor](/docs/api/extractors/BaseExtractor), and exposes as react component with the following props:
 
 <table>
-    <th>name</th>
-    <th>type</th>
-    <th>default</th>
-    <th>required</th>
-    <th>description</th>
+    <th>Property</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Default</th>
+    <th>Description</th>
     <tbody>
+        <tr>
+            <td>onResult</td>
+            <td>(data: TransientObject) => void</td>
+            <td>true</td>
+            <td></td>
+            <td>Callback function called when data extraction ends.</td>
+        </tr>
         <tr>
             <td>uri</td>
-            <td>string</td>
+            <td>string | undefined</td>
+            <td>false</td>
             <td>undefined</td>
-            <td>true</td>
-            <td>file path</td>
+            <td>File path</td>
         </tr>
         <tr>
             <td>patterns</td>
-            <td>string | string[]</td>
-            <td>undefined</td>
+            <td>RegExp | RegExp[]</td>
             <td>false</td>
-            <td>patterns to find</td>
+            <td>undefined</td>
+            <td>Regular expressions used to find matches</td>
+        </tr>
+        <tr>
+            <td>fromIntent</td>
+            <td>boolean</td>
+            <td>false</td>
+            <td>false</td>
+            <td>Determine if application should try get uri from intent provider (Android only)</td>
+        </tr>
+        <tr>
+            <td>title</td>
+            <td>string | undefined</td>
+            <td>false</td>
+            <td>This file is protected</td>
+            <td>Title displayed on password modal when file is encrypted</td>
+        </tr>
+        <tr>
+            <td>placeholder</td>
+            <td>string | undefined</td>
+            <td>false</td>
+            <td>Password</td>
+            <td>Input text placeholder displayed on password modal when file is encrypted</td>
+        </tr>
+        <tr>
+            <td>submit</td>
+            <td>string | undefined</td>
+            <td>false</td>
+            <td>Open</td>
+            <td>Text of submit button displayed on password modal when file is encrypted</td>
+        </tr>
+        <tr>
+            <td>cancel</td>
+            <td>string | undefined</td>
+            <td>false</td>
+            <td>Cancel</td>
+            <td>Text of cancel button displayed on password modal when file is encrypted</td>
         </tr>
     </tbody>
 </table>
 
-__TransientObject__ looks like:
-```ts
-/*
-    {
-        duration: '40ms', <-----------------------------: Time spent to match
-        isEncrypted: true, <----------------------------: Was file encrypted?
-        pages: 2, <-------------------------------------: File number of pages
-        patterns: ['(/\S+@\w+\.\w+)/g'], <--------------: List of used patterns
-        text: ['name@mail.com'], <----------------------: List of found matches on file
-        uri: 'content://some-file-path.pdf' <-----------: File path
-    }
-*/  
-```
-
-## extractFromIntent
-
-This function receive patterns to find matches (optional) and returns `Promise<TransientObject>` that is data extraction result. In case that no patterns was passed it's returns a list with all file text separated by lines. This function was designed thinking on handle [Intent Actions](https://developer.android.com/reference/android/content/Intent) that delegate to app a open file operation.
-
-<table>
-    <th>name</th>
-    <th>type</th>
-    <th>default</th>
-    <th>required</th>
-    <th>description</th>
-    <tbody>
-        <tr>
-            <td>patterns</td>
-            <td>string | string[]</td>
-            <td>undefined</td>
-            <td>false</td>
-            <td>patterns to find</td>
-        </tr>
-    </tbody>
-</table>
+> :bulb: You can see a full implementation at [Playground](../../getting-started/playground.md).  

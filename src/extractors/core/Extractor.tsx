@@ -24,7 +24,6 @@ type ExtractorProps = {
   fromIntent?: boolean;
   onResult: (data: TransientObject) => void;
   submit?: string;
-  password?: string;
   patterns?: Patterns;
   placeholder?: string;
   title?: string;
