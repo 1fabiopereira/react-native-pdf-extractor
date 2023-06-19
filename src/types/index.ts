@@ -1,22 +1,25 @@
 export interface Handler {
   setNext(handler: Handler): Handler;
-  handle<T, U>(data: T, ctx: U): Promise<T>;
+  handle<T>(data: T): Promise<T>;
 }
 
-export type Patterns = string | string[];
+export type Patterns = RegExp | RegExp[];
 
 export type TextResult = (string | null | undefined)[];
 
-export type Action = <T, U>(data: T, ctx: U) => Promise<T>;
+export type Action = <T>(data: T) => Promise<T>;
 
 export type TransientObject = {
   duration?: string;
+  fromIntent?: boolean;
   isEncrypted?: boolean;
   pages?: number;
   patterns?: Patterns;
   text?: TextResult;
   uri?: string;
 };
+
+export type WithPassword<T = any> = T & { password?: string };
 
 export interface PDFExtractor {
   getUri: () => Promise<string | undefined>;

@@ -8,11 +8,11 @@ export class AbstractChain implements Handler {
     return handler;
   }
 
-  async handle<T, U>(data: T, ctx: U): Promise<T> {
+  async handle<T>(data: T): Promise<T> {
     if (this.nextHandler) {
-      return await this.nextHandler.handle(data, ctx);
+      return await this.nextHandler.handle(data);
     }
 
-    return await Promise.resolve(data);
+    return data;
   }
 }
