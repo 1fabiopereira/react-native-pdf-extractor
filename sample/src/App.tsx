@@ -3,7 +3,7 @@ import { Button, FlatList, StyleSheet, Text, View } from 'react-native';
 import DocumentPicker from 'react-native-document-picker';
 
 import { Extractor, Patterns } from '../..';
-import { TransientObject } from '../../src/types';
+import { Transient } from '../../src/types';
 
 const App: React.FC = (): JSX.Element => {
   const [isEncrypted, setIsEncrypted] = useState<boolean | undefined>(false);
@@ -22,7 +22,7 @@ const App: React.FC = (): JSX.Element => {
     setUri(data.uri);
   };
 
-  const onResult = (data: TransientObject) => {
+  const onResult = (data: Transient) => {
     setPages(data.pages);
     setIsEncrypted(data.isEncrypted);
     setUri(data.uri);

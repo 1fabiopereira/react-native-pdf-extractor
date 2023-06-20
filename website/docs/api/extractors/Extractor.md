@@ -15,7 +15,7 @@ This extractor is built on top of [BaseExtractor](/docs/api/extractors/BaseExtra
     <tbody>
         <tr>
             <td>onResult</td>
-            <td>(data: TransientObject) => void</td>
+            <td>(data: Transient) => void</td>
             <td>true</td>
             <td></td>
             <td>Callback function called when data extraction ends.</td>
@@ -72,4 +72,4 @@ This extractor is built on top of [BaseExtractor](/docs/api/extractors/BaseExtra
     </tbody>
 </table>
 
-> :bulb: You can see a full implementation at [Playground](../../getting-started/playground.md).  
+> :bulb: You can see a full implementation at [Playground](../../getting-started/playground.md).

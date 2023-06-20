@@ -1,6 +1,6 @@
 {
   "name": "react-native-pdf-extractor",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "This library allows you to extract pdfs file data using matches specifics patterns.",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -61,7 +61,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-modal": "*"
   },
   "commitlint": {
     "extends": [

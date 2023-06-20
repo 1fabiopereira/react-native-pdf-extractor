@@ -8,3 +8,4 @@ export const Match = (pattern: RegExp, data?: string[]): string[] => {
   const matches = data.map(Reducer(pattern)).flat();
   return [...new Set(matches)].filter((value) => value) as string[];
 };
+

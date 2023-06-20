@@ -15,10 +15,10 @@ import { Extractor, Patterns } from 'react-native-pdf-extractor';
 
 // Some code snippets was be hidden for readability
 
-const callback = (data: TransientObject) => {
-    // Your implementation here 
-    console.log(data);
-    /*
+const callback = (data: Transient) => {
+  // Your implementation here
+  console.log(data);
+  /*
         {
             duration: '40ms', <-----------------------------: Time spent to match
             isEncrypted: false, <---------------------------: Was file encrypted?
@@ -27,29 +27,25 @@ const callback = (data: TransientObject) => {
             text: ['name@mail.com'], <----------------------: List of found matches on file
             uri: 'content://some-file-path.pdf' <-----------: File path
         }
-    */  
+    */
 };
 
 return (
-    <Extractor
-        onResult={callback}
-        patterns={Patterns.Common.Email}
-        uri={uri}
-    />
-)
+  <Extractor onResult={callback} patterns={Patterns.Common.Email} uri={uri} />
+);
 ```
 
-The second case is applicable when the app receives an __Android Intent Action__ with the file path, in this case the library extracts the path behind the scene and than trigger data extraction. You can see more about it on [Intent | Android developers](https://developer.android.com/reference/android/content/Intent).
+The second case is applicable when the app receives an **Android Intent Action** with the file path, in this case the library extracts the path behind the scene and than trigger data extraction. You can see more about it on [Intent | Android developers](https://developer.android.com/reference/android/content/Intent).
 
 ```ts
 import { Extractor, Patterns } from 'react-native-pdf-extractor';
 
 // Some code snippets was be hidden for readability
 
-const callback = (data: TransientObject) => {
-    // Your implementation here 
-    console.log(data);
-    /*
+const callback = (data: Transient) => {
+  // Your implementation here
+  console.log(data);
+  /*
         {
             duration: '40ms', <-----------------------------: Time spent to match
             isEncrypted: false, <---------------------------: Was file encrypted?
@@ -58,16 +54,16 @@ const callback = (data: TransientObject) => {
             text: ['name@mail.com'], <----------------------: List of found matches on file
             uri: 'content://some-file-path.pdf' <-----------: File path
         }
-    */  
+    */
 };
 
 return (
-    <Extractor
-        onResult={callback}
-        patterns={Patterns.Common.Email}
-        fromIntent // <-------------------------------------: Try get uri from intent provider (android only)
-    />
-)
+  <Extractor
+    onResult={callback}
+    patterns={Patterns.Common.Email}
+    fromIntent // <-------------------------------------: Try get uri from intent provider (android only)
+  />
+);
 ```
 
 ## Dependency

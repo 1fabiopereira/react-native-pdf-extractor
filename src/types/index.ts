@@ -9,7 +9,7 @@ export type TextResult = (string | null | undefined)[];
 
 export type Action = <T>(data: T) => Promise<T>;
 
-export type TransientObject = {
+export type Transient = {
   duration?: string;
   fromIntent?: boolean;
   isEncrypted?: boolean;
@@ -21,6 +21,10 @@ export type TransientObject = {
 
 export type WithPassword<T = any> = T & { password?: string };
 
+export type WithMaxSize<T = any> = T & { max: number };
+
+export type ExtraTransient = WithMaxSize<WithPassword<Transient>>;
+
 export interface PDFExtractor {
   getUri: () => Promise<string | undefined>;
   isEncrypted: () => Promise<boolean>;
@@ -31,6 +35,6 @@ export interface PDFExtractor {
 }
 
 export interface DataExtractor {
-  extract: (uri?: string, patterns?: Patterns) => Promise<TransientObject>;
-  extractFromIntent: (patterns?: Patterns) => Promise<TransientObject>;
+  extract: (uri?: string, patterns?: Patterns) => Promise<Transient>;
+  extractFromIntent: (patterns?: Patterns) => Promise<Transient>;
 }
