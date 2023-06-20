@@ -55,7 +55,7 @@ describe('CommonExtractor', () => {
 
       try {
         await CommonExtractor.file({ uri: undefined });
-      } catch { }
+      } catch {}
 
       expect(spy).toBeCalledTimes(0);
     });

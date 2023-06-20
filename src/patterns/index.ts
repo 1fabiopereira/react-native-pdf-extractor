@@ -4,9 +4,9 @@ const Common = {
 
 const Brazil = {
   BankSlip: [
-    /([0-9]{5})\.([0-9]{5})\s([0-9]{5})\.([0-9]{6})\s([0-9]{5})\.([0-9]{6})\s([0-9])\s([0-9]{14})/, // Banking - Typeable line
-    /([0-9]{12})\s([0-9]{12})\s([0-9]{12})\s([0-9]{12})/, // Tax revenues - Bar code
-    /([0-9]{11})-([0-9])\s([0-9]{11})-([0-9])\s([0-9]{11})-([0-9])\s([0-9]{11})-([0-9])/, // Tax revenues - Typeable line
+    /(\d{5})\.(\d{5})\s(\d{5})\.(\d{6})\s(\d{5})\.(\d{6})\s(\d)\s(\d{14})/, // Banking - Typeable line
+    /(\d{12})\s(\d{12})\s(\d{12})\s(\d{12})/, // Tax revenues - Bar code
+    /(\d{11})-(\d)\s(\d{11})-(\d)\s(\d{11})-(\d)\s(\d{11})-(\d)/, // Tax revenues - Typeable line
   ],
 };
 

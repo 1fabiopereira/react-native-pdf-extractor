@@ -5,7 +5,7 @@ import Modal from 'react-native-modal';
 import { Chain, ChainLink } from '../../chains';
 import Styles from './Styles';
 
-import type { Action, Patterns, Transient } from '../../types';
+import type { Patterns, Transient } from '../../types';
 import { CommonExtractor } from './Common';
 
 type ExtractorProps = {
@@ -64,9 +64,9 @@ export const Extractor: React.FC<ExtractorProps> = memo(
      */
     const verify = useCallback(async () => {
       const data: Transient = await new Chain([
-        new ChainLink(CommonExtractor.file as Action),
-        new ChainLink(CommonExtractor.check as Action),
-        new ChainLink(CommonExtractor.encrypted as Action),
+        new ChainLink(CommonExtractor.file),
+        new ChainLink(CommonExtractor.check),
+        new ChainLink(CommonExtractor.encrypted),
       ]).exec({ uri, patterns });
 
       if (data.isEncrypted && !password) {
@@ -85,8 +85,8 @@ export const Extractor: React.FC<ExtractorProps> = memo(
         const start = new Date().getTime();
 
         const result = await new Chain([
-          new ChainLink(CommonExtractor.pages as Action),
-          new ChainLink(CommonExtractor.matches as Action),
+          new ChainLink(CommonExtractor.pages),
+          new ChainLink(CommonExtractor.matches),
         ]).exec({ ...data, password, max: max });
 
         const finish = new Date().getTime();
@@ -117,7 +117,7 @@ export const Extractor: React.FC<ExtractorProps> = memo(
      * Verifies if can re-render component or runs data extraction
      */
     useEffect(() => {
-      const withoutPatterns = uri || fromIntent;
+      const withoutPatterns = uri ?? fromIntent;
       const withPatterns = (uri && patterns) || (fromIntent && patterns);
       const lock = `${uri}|${patterns}|${fromIntent}|${password}`;
 

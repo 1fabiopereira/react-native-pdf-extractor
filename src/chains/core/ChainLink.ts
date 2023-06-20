@@ -1,10 +1,9 @@
 import { AbstractChain } from './AbstractHandler';
-import type { Action } from '../../types';
 
 export class ChainLink extends AbstractChain {
-  private readonly action: Action;
+  private readonly action: any;
 
-  constructor(action: Action) {
+  constructor(action: any) {
     super();
     this.action = action;
   }

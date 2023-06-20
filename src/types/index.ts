@@ -7,8 +7,6 @@ export type Patterns = RegExp | RegExp[];
 
 export type TextResult = (string | null | undefined)[];
 
-export type Action = <T>(data: T) => Promise<T>;
-
 export type Transient = {
   duration?: string;
   fromIntent?: boolean;
