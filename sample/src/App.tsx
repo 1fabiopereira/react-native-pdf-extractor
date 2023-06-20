@@ -22,12 +22,12 @@ const App: React.FC = (): JSX.Element => {
     setUri(data.uri);
   };
 
-  const onResult = (data: Transient) => {
-    setPages(data.pages);
-    setIsEncrypted(data.isEncrypted);
-    setUri(data.uri);
-    setTime(data.duration);
-    setResult(data.text as string[]);
+  const onResult = (data: Transient | null) => {
+    setPages(data?.pages);
+    setIsEncrypted(data?.isEncrypted);
+    setUri(data?.uri);
+    setTime(data?.duration);
+    setResult(data?.text as string[]);
   };
 
   return (

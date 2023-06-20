@@ -42,15 +42,21 @@ export const Extractor: React.FC<ExtractorProps> = memo(
      */
     const close = () => {
       setVisibility(false);
+      onResult(null);
     };
 
     /**
      * Triggers callbacks when password changes
      */
     const changePassword = useCallback(() => {
-      close();
-      setPassword(value);
-    }, [value]);
+      setVisibility(false);
+
+      if (value?.length) {
+        setPassword(value);
+      } else {
+        onResult(null);
+      }
+    }, [value, onResult]);
 
     /**
      * Verifies if needs user interaction to provide password
