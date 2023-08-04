@@ -2,6 +2,7 @@ package com.reactnative.pdf.extractor
 
 import android.content.ContentResolver
 import android.net.Uri
+import androidx.core.content.FileProvider
 
 import com.facebook.react.bridge.*
 import com.reactnative.pdf.extractor.core.PdfHandler
@@ -61,12 +62,16 @@ class PdfExtractorModule(reactContext: ReactApplicationContext) : ReactContextBa
   }
 
   @ReactMethod
-  fun canIExtract(promise: Promise) {
+  fun canIExtract(promise: Promise): Any {
     try {
       val uri = getCurrentUri()
       val resolver = getCurrentResolver()
 
-      return promise.resolve(uri !== null && resolver !== null)
+      if (uri !== null && resolver !== null) {
+        return promise.resolve(resolver.getType(uri).equals("application/pdf"))
+      }
+
+      return promise.resolve(false)
     } catch (e: Exception) {
       e.printStackTrace()
       return promise.reject(e)
