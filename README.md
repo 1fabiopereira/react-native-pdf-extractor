@@ -5,7 +5,6 @@
     </h1>
 </h1>
 
-
 <p align="center">
     <a href="https://www.npmjs.com/package/react-native-pdf-extractor">
         <img src="https://img.shields.io/npm/dw/react-native-pdf-extractor.svg?style=flat-square" alt="NPM downloads" />
@@ -24,15 +23,18 @@
 This library allows you to extract pdfs file data using matches specifics patterns.
 
 ## [Documentation](https://1fabiopereira.github.io/react-native-pdf-extractor/)
+
 - ### [Getting Started](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/before-you-start)
-    - [Before you start](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/before-you-start)
-    - [Installation](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/installation)
-    - [Configuration](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/configuration)
-    - [Usage](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/usage)
-     - [Playground app](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/playground)
-- ### [API](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/methods)
-    - [Methods](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/methods)
-    - [Patterns](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/patterns)
-- ### [Meta](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/contributing)
-    - [Contributing](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/contributing)
-    - [License](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/license)
+  - [Before you start](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/before-you-start)
+  - [Installation](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/getting-started/installation)
+  - [Configuration](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/getting-started/configuration)
+  - [Usage](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/getting-started/usage)
+  - [Playground app](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/getting-started/playground)
+- ### [API](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/api)
+
+  - [Extractors](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/api/extractors)
+  - [Patterns](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/api/patterns)
+
+- ### [Code of Conduct](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/code-of-conduct)
+- ### [Contributing](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/contributing)
+- ### [License](https://1fabiopereira.github.io/react-native-pdf-extractor/docs/license)
