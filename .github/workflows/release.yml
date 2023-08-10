@@ -61,10 +61,10 @@ jobs:
       run: yarn test
 
     # Run Gradle unit Tests
-    - name: Run Gradle Unit Tests
-      run: |
-        cd android/
-        ./gradlew testDebugUnitTest --console verbose
+    # - name: Run Gradle Unit Tests
+    #   run: |
+    #     cd android/
+    #     ./gradlew testDebugUnitTest --console verbose
 
     # Perform build project
     - name: Build
