@@ -4,39 +4,21 @@ buildscript {
     : project.properties['PdfExtractor_kotlinVersion']
 
   repositories {
-    mavenCentral()
     google()
+    mavenCentral()
     maven { url 'https://plugins.gradle.org/m2/' }
   }
 
   dependencies {
     classpath('com.android.tools.build:gradle:7.1.3')
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.0"
-    classpath 'com.dicedmelon.gradle:jacoco-android:0.1.5'
   }
 }
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'org.sonarqube'
-apply plugin: 'com.dicedmelon.gradle.jacoco-android'
-
-jacoco {
-  toolVersion = "0.8.4"
-}
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
-
-sonarqube {
-  properties {
-    property "sonar.projectKey", "code-leak_react-native-pdf-extractor_android"
-    property "sonar.organization", "code-leak"
-    property "sonar.host.url", "https://sonarcloud.io"
-    property "sonar.sourceEncoding", "UTF-8"
-    property "sonar.java.coveragePlugin", "jacoco"
-  }
-}
 
 def getExtOrDefault(name) {
   return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties['PdfExtractor_' + name]
@@ -53,7 +35,7 @@ android {
     minSdkVersion getExtOrIntegerDefault('minSdkVersion')
     targetSdkVersion getExtOrIntegerDefault('targetSdkVersion')
     versionCode 1
-    versionName "0.1.2"
+    versionName "0.2.5"
   }
 
   buildTypes {
