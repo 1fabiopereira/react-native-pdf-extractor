@@ -1,3 +1,7 @@
+# ⚠️ PoC Project — Discontinued
+
+> **Note:** This project is a Proof of Concept (PoC) and has been discontinued. It is not maintained and should not be used in production.
+
 <h1 align="center">
     <h1 align="center">
         <img src="./website/static/img/react-native-pdf-extractor.svg" alt="React Native PDF Extractor Logo" /><br />
